@@ -5,6 +5,11 @@
 
 
 ## Part II
+<p align="center">
+  <img src="img/quartus_L1b.jpg" alt="Part II Verilog Code" width="300"/>
+  <br>
+  <em>Figure 2: System architecture diagram.</em>
+</p>
 
 ## Part III
 
