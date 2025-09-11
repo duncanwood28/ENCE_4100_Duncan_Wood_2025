@@ -10,6 +10,8 @@
 
 
 ## Part II
+
+### 2-to-1 Multiplexer
 <p align="center">
   <img src="img/quartus_L1b.jpg" alt="Part II Verilog Code" width="300"/>
   <br>
@@ -18,7 +20,19 @@
 <p align="center">
   <img src="img/quartus_L1b2.jpg" alt="Part II Verilog Code" width="300"/>
   <br>
-  <em>Figure 2: Part II 2-to-1 Multiplexer Code.</em>
+  <em>Figure 3: Part II 2-to-1 Multiplexer Code.</em>
+</p>
+
+### 8 Bit Wide 2-to-1 Multiplexer
+<p align="center">
+  <img src="img/quartus_L1b3.jpg" alt="Part II Verilog Code" width="400"/>
+  <br>
+  <em>Figure 4: Part II Main Code.</em>
+</p>
+<p align="center">
+  <img src="img/quartus_L1b4.jpg" alt="Part II Verilog Code" width="500"/>
+  <br>
+  <em>Figure 5: Part II 8 bit wide 2-to-1 Multiplexer Code.</em>
 </p>
 
 ## Part III
