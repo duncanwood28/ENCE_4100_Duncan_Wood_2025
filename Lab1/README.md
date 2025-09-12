@@ -37,6 +37,11 @@
 
 ## Part III
 
+<p align="center">
+  <img src="img/figure1.jpg" alt="Figure 1" width="400"/>
+  <img src="img/figure2.jpg" alt="Figure 2" width="400"/>
+</p>
+
 ## Part IV
 
 ## Part V
