@@ -83,4 +83,24 @@ Figure 14: Rotating HELLO Main Code C
 
 ## Part VI
 
+<p align="center">
+  <img src="img/mux_3bit_5to1_updated.jpg" alt="Figure 1" width="500"/>
+</p>
+Figure 15: Updated 8-to-1 3 bit input Multiplexer
+Using the 8-to-1 3 Bit Mux code from part V, was not working out fully. The first 3 input combinations were successful but the remaining were remaining at "_HELLO" due to difficulties in the logic.
+<p align="center">
+  <img src="img/part6_main_a.jpg" alt="Figure 3" width="500"/>
+</p>
+Figure 16: Part 6 Rotating HELLO Main Code A
+<p align="center">
+  <img src="img/part6_main_b.jpg" alt="Figure 4" width="500"/>
+</p>
+Figure 17: Part 6 Rotating HELLO Main Code B
+<p align="center">
+  <img src="img/part6_main_c.jpg" alt="Figure 5" width="600"/>
+</p>
+Figure 18: Part 6 Rotating HELLO Main Code C
+
+
+
 ## Graduate Challenge
