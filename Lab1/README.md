@@ -61,20 +61,25 @@ Figure 9: Main Code Setup
 
 ## Part V
 <p align="center">
-  <img src"img/mux_3bit_5to1.jpg" alt="Figure 1" width="500"/>
+  <img src="img/mux_3bit_5to1.jpg" alt="Figure 1" width="500"/>
 </p>
+Figure 10: 5-to-1 3 bit input Multiplexer
 <p align="center">
-  <img src"img/char_7seg.jpg" alt="Figure 1" width="500"/>
+  <img src="img/char_7seg.jpg" alt="Figure 2" width="400"/>
 </p>
+Figure 11: 3 Bit input 7 Segment Decoder
 <p align="center">
-  <img src"img/part5_main_a.jpg" alt="Figure 1" width="500"/>
+  <img src="img/part5_main_a.jpg" alt="Figure 3" width="500"/>
 </p>
+Figure 12: Rotating HELLO Main Code A
 <p align="center">
-  <img src"img/part5_main_b.jpg" alt="Figure 1" width="500"/>
+  <img src="img/part5_main_b.jpg" alt="Figure 4" width="500"/>
 </p>
+Figure 13: Rotating HELLO Main Code B
 <p align="center">
-  <img src"img/part5_main_c.jpg" alt="Figure 1" width="500"/>
+  <img src="img/part5_main_c.jpg" alt="Figure 5" width="600"/>
 </p>
+Figure 14: Rotating HELLO Main Code C
 
 ## Part VI
 
