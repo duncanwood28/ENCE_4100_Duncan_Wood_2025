@@ -60,6 +60,21 @@ Figure 9: Main Code Setup
 
 
 ## Part V
+<p align="center">
+  <img src"img/mux_3bit_5to1.jpg" alt="Figure 1" width="500"/>
+</p>
+<p align="center">
+  <img src"img/char_7seg.jpg" alt="Figure 1" width="500"/>
+</p>
+<p align="center">
+  <img src"img/part5_main_a.jpg" alt="Figure 1" width="500"/>
+</p>
+<p align="center">
+  <img src"img/part5_main_b.jpg" alt="Figure 1" width="500"/>
+</p>
+<p align="center">
+  <img src"img/part5_main_c.jpg" alt="Figure 1" width="500"/>
+</p>
 
 ## Part VI
 
