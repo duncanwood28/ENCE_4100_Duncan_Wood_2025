@@ -41,14 +41,23 @@
   <img src="img/mux_5_1_3bita.jpg" alt="Figure 1" width="300"/>
   <img src="img/mux_5_1_3bitb.jpg" alt="Figure 2" width="300"/>
 </p>
-Figure 6: 3 Bit 5-to-1 Multiplexer code
+Figure 6: 3 Bit 5-to-1 Multiplexer Module
 
 <p align="center">
-  <img src="img/mux_5_1_3bit_main.jpg" alt="Figure 1" width="500"/>
+  <img src="img/mux_5_1_3bit_main" alt="Figure 1" width="500"/>
 </p>
 Figure 7: Main Code Setup
 
 ## Part IV
+<p align="center">
+  <img src="img/seg7_3bit.jpg.jpg" alt="Figure 1" width="500"/>
+</p>
+Figure 8: 7-Segment Display Module
+<p align="center">
+  <img src="img/seg7_3bit_main.jpg" alt="Figure 1" width="500"/>
+</p>
+Figure 9: Main Code Setup
+
 
 ## Part V
 
