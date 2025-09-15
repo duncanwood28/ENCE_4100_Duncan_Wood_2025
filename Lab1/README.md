@@ -81,6 +81,30 @@ Figure 13: Rotating HELLO Main Code B
 </p>
 Figure 14: Rotating HELLO Main Code C
 
+##FPGA Output
+<p align="center">
+  <img src="img/IMG_1340.heic" alt="Figure 6" width="200"/>
+</p>
+
+<p align="center">
+  <img src="img/IMG_1344.heic" alt="Figure 7" width="200"/>
+</p>
+
+<p align="center">
+  <img src="img/IMG_1342.heic" alt="Figure 8" width="200"/>
+</p>
+
+<p align="center">
+  <img src="img/IMG_1343.heic" alt="Figure 9" width="200"/>
+</p>
+
+<p align="center">
+  <img src="img/IMG_1344.heic" alt="Figure 10" width="200"/>
+</p>
+
+
+
+
 ## Part VI
 
 <p align="center">
