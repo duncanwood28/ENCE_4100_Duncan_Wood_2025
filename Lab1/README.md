@@ -93,29 +93,29 @@
 
 ---
 
-### FPGA Output
+FPGA Output
 <div align="center">
-  <img src="img/IMG_1340.jpg" alt="FPGA Output 1" width="400"/><br>
+  <img src="img/p5a.jpg" alt="FPGA Output 1" width="400"/><br>
   <em>Figure 15: FPGA Output 1.</em>
 </div>
 
 <div align="center">
-  <img src="img/IMG_1341.jpg" alt="FPGA Output 2" width="400"/><br>
+  <img src="img/p5b.jpg" alt="FPGA Output 2" width="400"/><br>
   <em>Figure 16: FPGA Output 2.</em>
 </div>
 
 <div align="center">
-  <img src="img/IMG_1342.jpg" alt="FPGA Output 3" width="400"/><br>
+  <img src="img/p5c.jpg" alt="FPGA Output 3" width="400"/><br>
   <em>Figure 17: FPGA Output 3.</em>
 </div>
 
 <div align="center">
-  <img src="img/IMG_1343.jpg" alt="FPGA Output 4" width="400"/><br>
+  <img src="img/p5d.jpg" alt="FPGA Output 4" width="400"/><br>
   <em>Figure 18: FPGA Output 4.</em>
 </div>
 
 <div align="center">
-  <img src="img/IMG_1344.jpg" alt="FPGA Output 5" width="400"/><br>
+  <img src="img/p5e.jpg" alt="FPGA Output 5" width="400"/><br>
   <em>Figure 19: FPGA Output 5.</em>
 </div>
 
