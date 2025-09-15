@@ -1,130 +1,152 @@
 # Lab 1: Intro To Verilog
 *Duncan Wood* <br>
 *09/10/2025*
-## Part I
-<p align="center">
-  <img src="img/quartus_L1a.jpg" alt="Part I Verilog Code" width="300"/>
-  <br>
-  <em>Figure 1: Part I Code.</em>
-</p>
 
+---
+
+## Part I
+<div align="center">
+  <img src="img/quartus_L1a.jpg" alt="Part I Verilog Code" width="300"/><br>
+  <em>Figure 1: Part I Code.</em>
+</div>
+
+---
 
 ## Part II
 
 ### 2-to-1 Multiplexer
-<p align="center">
-  <img src="img/quartus_L1b.jpg" alt="Part II Verilog Code" width="300"/>
-  <br>
+<div align="center">
+  <img src="img/quartus_L1b.jpg" alt="Part II Verilog Code" width="300"/><br>
   <em>Figure 2: Part II Main Code.</em>
-</p>
-<p align="center">
-  <img src="img/quartus_L1b2.jpg" alt="Part II Verilog Code" width="300"/>
-  <br>
+</div>
+
+<div align="center">
+  <img src="img/quartus_L1b2.jpg" alt="Part II Verilog Code" width="300"/><br>
   <em>Figure 3: Part II 2-to-1 Multiplexer Code.</em>
-</p>
+</div>
 
 ### 8 Bit Wide 2-to-1 Multiplexer
-<p align="center">
-  <img src="img/quartus_L1b3.jpg" alt="Part II Verilog Code" width="400"/>
-  <br>
+<div align="center">
+  <img src="img/quartus_L1b3.jpg" alt="Part II Verilog Code" width="400"/><br>
   <em>Figure 4: Part II Main Code.</em>
-</p>
-<p align="center">
-  <img src="img/quartus_L1b4.jpg" alt="Part II Verilog Code" width="500"/>
-  <br>
-  <em>Figure 5: Part II 8 bit wide 2-to-1 Multiplexer Code.</em>
-</p>
+</div>
+
+<div align="center">
+  <img src="img/quartus_L1b4.jpg" alt="Part II Verilog Code" width="500"/><br>
+  <em>Figure 5: Part II 8-bit Wide 2-to-1 Multiplexer Code.</em>
+</div>
+
+---
 
 ## Part III
+<div align="center">
+  <img src="img/mux_5_1_3bita.jpg" alt="3 Bit 5-to-1 Multiplexer A" width="300"/>
+  <img src="img/mux_5_1_3bitb.jpg" alt="3 Bit 5-to-1 Multiplexer B" width="300"/><br>
+  <em>Figure 6: 3 Bit 5-to-1 Multiplexer Module.</em>
+</div>
 
-<p align="center">
-  <img src="img/mux_5_1_3bita.jpg" alt="Figure 1" width="300"/>
-  <img src="img/mux_5_1_3bitb.jpg" alt="Figure 2" width="300"/>
-</p>
-Figure 6: 3 Bit 5-to-1 Multiplexer Module
+<div align="center">
+  <img src="img/mux_5_1_3bit_main.jpg" alt="3 Bit Multiplexer Main Code" width="500"/><br>
+  <em>Figure 7: Main Code Setup.</em>
+</div>
 
-<p align="center">
-  <img src="img/mux_5_1_3bit_main" alt="Figure 1" width="500"/>
-</p>
-Figure 7: Main Code Setup
+---
 
 ## Part IV
-<p align="center">
-  <img src="img/seg7_3bit.jpg.jpg" alt="Figure 1" width="500"/>
-</p>
-Figure 8: 7-Segment Display Module
-<p align="center">
-  <img src="img/seg7_3bit_main.jpg" alt="Figure 1" width="500"/>
-</p>
-Figure 9: Main Code Setup
+<div align="center">
+  <img src="img/seg7_3bit.jpg" alt="7-Segment Display Module" width="500"/><br>
+  <em>Figure 8: 7-Segment Display Module.</em>
+</div>
 
+<div align="center">
+  <img src="img/seg7_3bit_main.jpg" alt="7-Segment Display Main Code" width="500"/><br>
+  <em>Figure 9: Main Code Setup.</em>
+</div>
+
+---
 
 ## Part V
-<p align="center">
-  <img src="img/mux_3bit_5to1.jpg" alt="Figure 1" width="500"/>
-</p>
-Figure 10: 5-to-1 3 bit input Multiplexer
-<p align="center">
-  <img src="img/char_7seg.jpg" alt="Figure 2" width="400"/>
-</p>
-Figure 11: 3 Bit input 7 Segment Decoder
-<p align="center">
-  <img src="img/part5_main_a.jpg" alt="Figure 3" width="500"/>
-</p>
-Figure 12: Rotating HELLO Main Code A
-<p align="center">
-  <img src="img/part5_main_b.jpg" alt="Figure 4" width="500"/>
-</p>
-Figure 13: Rotating HELLO Main Code B
-<p align="center">
-  <img src="img/part5_main_c.jpg" alt="Figure 5" width="600"/>
-</p>
-Figure 14: Rotating HELLO Main Code C
+<div align="center">
+  <img src="img/mux_3bit_5to1.jpg" alt="5-to-1 3 Bit Multiplexer" width="500"/><br>
+  <em>Figure 10: 5-to-1 3-bit Input Multiplexer.</em>
+</div>
 
-##FPGA Output
-<p align="center">
-  <img src="img/IMG_1340.heic" alt="Figure 6" width="200"/>
-</p>
+<div align="center">
+  <img src="img/char_7seg.jpg" alt="3 Bit 7-Segment Decoder" width="400"/><br>
+  <em>Figure 11: 3-bit Input 7-Segment Decoder.</em>
+</div>
 
-<p align="center">
-  <img src="img/IMG_1344.heic" alt="Figure 7" width="200"/>
-</p>
+<div align="center">
+  <img src="img/part5_main_a.jpg" alt="Rotating HELLO Main Code A" width="500"/><br>
+  <em>Figure 12: Rotating HELLO Main Code A.</em>
+</div>
 
-<p align="center">
-  <img src="img/IMG_1342.heic" alt="Figure 8" width="200"/>
-</p>
+<div align="center">
+  <img src="img/part5_main_b.jpg" alt="Rotating HELLO Main Code B" width="500"/><br>
+  <em>Figure 13: Rotating HELLO Main Code B.</em>
+</div>
 
-<p align="center">
-  <img src="img/IMG_1343.heic" alt="Figure 9" width="200"/>
-</p>
+<div align="center">
+  <img src="img/part5_main_c.jpg" alt="Rotating HELLO Main Code C" width="600"/><br>
+  <em>Figure 14: Rotating HELLO Main Code C.</em>
+</div>
 
-<p align="center">
-  <img src="img/IMG_1344.heic" alt="Figure 10" width="200"/>
-</p>
+---
 
+### FPGA Output
+<div align="center">
+  <img src="img/IMG_1340.jpg" alt="FPGA Output 1" width="400"/><br>
+  <em>Figure 15: FPGA Output 1.</em>
+</div>
 
+<div align="center">
+  <img src="img/IMG_1341.jpg" alt="FPGA Output 2" width="400"/><br>
+  <em>Figure 16: FPGA Output 2.</em>
+</div>
 
+<div align="center">
+  <img src="img/IMG_1342.jpg" alt="FPGA Output 3" width="400"/><br>
+  <em>Figure 17: FPGA Output 3.</em>
+</div>
+
+<div align="center">
+  <img src="img/IMG_1343.jpg" alt="FPGA Output 4" width="400"/><br>
+  <em>Figure 18: FPGA Output 4.</em>
+</div>
+
+<div align="center">
+  <img src="img/IMG_1344.jpg" alt="FPGA Output 5" width="400"/><br>
+  <em>Figure 19: FPGA Output 5.</em>
+</div>
+
+---
 
 ## Part VI
+<div align="center">
+  <img src="img/mux_3bit_5to1_updated.jpg" alt="Updated 8-to-1 Multiplexer" width="500"/><br>
+  <em>Figure 20: Updated 8-to-1 3-bit Input Multiplexer.</em>
+</div>
 
-<p align="center">
-  <img src="img/mux_3bit_5to1_updated.jpg" alt="Figure 1" width="500"/>
-</p>
-Figure 15: Updated 8-to-1 3 bit input Multiplexer
-Using the 8-to-1 3 Bit Mux code from part V, was not working out fully. The first 3 input combinations were successful but the remaining were remaining at "_HELLO" due to difficulties in the logic.
-<p align="center">
-  <img src="img/part6_main_a.jpg" alt="Figure 3" width="500"/>
-</p>
-Figure 16: Part 6 Rotating HELLO Main Code A
-<p align="center">
-  <img src="img/part6_main_b.jpg" alt="Figure 4" width="500"/>
-</p>
-Figure 17: Part 6 Rotating HELLO Main Code B
-<p align="center">
-  <img src="img/part6_main_c.jpg" alt="Figure 5" width="600"/>
-</p>
-Figure 18: Part 6 Rotating HELLO Main Code C
+Using the 8-to-1 3 Bit Mux code from Part V was not fully successful.  
+The first 3 input combinations worked, but the remaining displayed "_HELLO" due to logic difficulties.
 
+<div align="center">
+  <img src="img/part6_main_a.jpg" alt="Part 6 Rotating HELLO Main Code A" width="500"/><br>
+  <em>Figure 21: Part 6 Rotating HELLO Main Code A.</em>
+</div>
 
+<div align="center">
+  <img src="img/part6_main_b.jpg" alt="Part 6 Rotating HELLO Main Code B" width="500"/><br>
+  <em>Figure 22: Part 6 Rotating HELLO Main Code B.</em>
+</div>
+
+<div align="center">
+  <img src="img/part6_main_c.jpg" alt="Part 6 Rotating HELLO Main Code C" width="600"/><br>
+  <em>Figure 23: Part 6 Rotating HELLO Main Code C.</em>
+</div>
+
+---
 
 ## Graduate Challenge
+*(Content TBD)*
+
