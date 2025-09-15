@@ -146,7 +146,48 @@ The first 3 input combinations worked, but the remaining displayed "_HELLO" due 
 </div>
 
 ---
+FPGA Output
+<div align="center">
+  <img src="img/IMG_1345.jpg" alt="FPGA Output 1 P6" width="400"/><br>
+  <em>Figure 24: FPGA Output 1 Part VI.</em>
+</div>
 
+<div align="center">
+  <img src="img/IMG_1346.jpg" alt="FPGA Output 2 p6" width="400"/><br>
+  <em>Figure 25: FPGA Output 2 Part VI.</em>
+</div>
+
+<div align="center">
+  <img src="img/IMG_1347.jpg" alt="FPGA Output 3 P6" width="400"/><br>
+  <em>Figure 26: FPGA Output 3 Part VI.</em>
+</div>
+
+<div align="center">
+  <img src="img/IMG_1348.jpg" alt="FPGA Output 4 P6" width="400"/><br>
+  <em>Figure 27: FPGA Output 4 Part VI.</em>
+</div>
+
+<div align="center">
+  <img src="img/IMG_1349.jpg" alt="FPGA Output 5 P6" width="400"/><br>
+  <em>Figure 28: FPGA Output 5 Part VI.</em>
+</div>
+
+<div align="center">
+  <img src="img/IMG_1350.jpg" alt="FPGA Output 6 P6" width="400"/><br>
+  <em>Figure 29: FPGA Output 6 Part VI.</em>
+</div>
+
+<div align="center">
+  <img src="img/IMG_1351.jpg" alt="FPGA Output 7 P6" width="400"/><br>
+  <em>Figure 30: FPGA Output 7 Part VI.</em>
+</div>
+
+<div align="center">
+  <img src="img/IMG_1352.jpg" alt="FPGA Output 8 P6" width="400"/><br>
+  <em>Figure 31: FPGA Output 8 Part VI.</em>
+</div>
+
+---
 ## Graduate Challenge
 *(Content TBD)*
 
