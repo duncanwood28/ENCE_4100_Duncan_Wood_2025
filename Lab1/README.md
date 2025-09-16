@@ -190,6 +190,7 @@ FPGA Output
 ---
 ## Automatic 7-Segment Display Message
 <p align="center">
-  <img src="img/FullSizeRender.gif" alt="Demo GIF" width="400"/>
+  <img src="img/FullSizeRender.gif" alt="Demo GIF" width="400"/><br>
+  <em>Figure 32: FPGA Demo.</em>
 </p>
 
