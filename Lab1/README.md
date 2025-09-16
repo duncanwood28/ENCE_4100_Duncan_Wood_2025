@@ -5,6 +5,7 @@
 ---
 
 ## Part I
+First, a Verilog code was written to create a simple circuit inside the FPGA that directly connects the 10 toggle switches to their respective LEDs. When one switch is turned on, so does the red LED above it.
 <div align="center">
   <img src="img/quartus_L1a.jpg" alt="Part I Verilog Code" width="300"/><br>
   <em>Figure 1: Part I Code.</em>
