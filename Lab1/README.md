@@ -259,34 +259,38 @@ Figures 33-40 show the FPGA output for each Boolean 3 bit code.
 
 ---
 ## Automatic 7-Segment Display Message
+<div align="center">
+  <img src="img/auto7seg_diagram.jpg" alt="FPGA Output 8 P6" width="500"/><br>
+  <em>Figure 41:.</em>
+</div>
 A code was written to expand on Part VI by making the rotating display automatic without manually turning switches.
 <div align="center">
   <img src="img/clk_divider.jpg" alt="FPGA Output 8 P6" width="500"/><br>
-  <em>Figure 41: Clock Divider.</em>
+  <em>Figure 42: Clock Divider.</em>
 </div>
 Above is the Verilog module for the clock divider
 <div align="center">
   <img src="img/scroll_counter.jpg" alt="FPGA Output 8 P6" width="500"/><br>
-  <em>Figure 42: Counter.</em>
+  <em>Figure 43: Counter.</em>
 </div>
 Above is the Verilog module for the counter. 
 <div align="center">
   <img src="img/hello_scroller_auto_1.jpg" alt="FPGA Output 8 P6" width="500"/><br>
-  <em>Figure 43: Automatic Rotating Display A.</em>
+  <em>Figure 44: Automatic Rotating Display A.</em>
 </div>
 <div align="center">
   <img src="img/hello_scroller_auto_2.jpg" alt="FPGA Output 8 P6" width="400"/><br>
-  <em>Figure 44: Automatic Rotating Display B.</em>
+  <em>Figure 45: Automatic Rotating Display B.</em>
 </div>
 Figures 44 and 45 above show the Verilog module for the automatic rotating 7-segment display
 <div align="center">
   <img src="img/hello_scroller_auto_main.jpg" alt="FPGA Output 8 P6" width="500"/><br>
-  <em>Figure 45: Automatic Rotating Display Main Code.</em>
+  <em>Figure 46: Automatic Rotating Display Main Code.</em>
 </div>
 
 ### FPGA Output Demo
 <p align="center">
   <img src="img/FullSizeRender.gif" alt="Demo GIF" width="400"/><br>
-  <em>Figure 41: FPGA Demo.</em>
+  <em>Figure 47: FPGA Demo.</em>
 </p>
 
