@@ -188,6 +188,8 @@ FPGA Output
 </div>
 
 ---
-## Graduate Challenge
-*(Content TBD)*
+## Automatic 7-Segment Display Message
+<p align="center">
+  <img src="img/FullSizeRender.gif" alt="Demo GIF" width="400"/>
+</p>
 
