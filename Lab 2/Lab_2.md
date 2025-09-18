@@ -53,7 +53,7 @@
 </div>
 
 ## Part VI
-
+Remember to get RTL
 
 
 
