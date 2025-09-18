@@ -51,3 +51,13 @@
   <img src="img/thumbnail_IMG_1364.jpg" alt="FPGA Output 3" width="400"/><br>
   <em>Figure 6: FPGA displaying output for test case C.</em>
 </div>
+
+## Part VI
+
+
+
+
+## Part VII
+
+
+
