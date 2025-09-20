@@ -134,6 +134,20 @@
   <img src="img/digi_lab2_p6b.jpg" alt="FPGA Output 2" width="400"/><br>
   <em>Figure 17:.</em>
 </div>
+<div align="center">
+  <img src="img/thumbnail_IMG_1366.jpg" alt="FPGA Output 2" width="400"/><br>
+  <em>Figure 20: FPGA displaying output for test case A.</em>
+</div>
+
+<div align="center">
+  <img src="img/thumbnail_IMG_1367.jpg" alt="FPGA Output 3" width="400"/><br>
+  <em>Figure 21: FPGA displaying output for test case B.</em>
+</div>
+
+<div align="center">
+  <img src="img/thumbnail_IMG_1368.jpg" alt="FPGA Output 3" width="400"/><br>
+  <em>Figure 22: FPGA displaying output for test case C.</em>
+</div>
 
 
 
