@@ -139,6 +139,19 @@
 
 
 ## Part VII
+<div align="center">
+  <img src="img/thumbnail_IMG_1369.jpg" alt="FPGA Output 2" width="400"/><br>
+  <em>Figure 20: FPGA displaying output for test case A.</em>
+</div>
 
+<div align="center">
+  <img src="img/thumbnail_IMG_1370.jpg" alt="FPGA Output 3" width="400"/><br>
+  <em>Figure 21: FPGA displaying output for test case B.</em>
+</div>
+
+<div align="center">
+  <img src="img/thumbnail_IMG_1371.jpg" alt="FPGA Output 3" width="400"/><br>
+  <em>Figure 22: FPGA displaying output for test case C.</em>
+</div>
 
 
