@@ -124,31 +124,31 @@
 ## Part VI Remember to get RTL
 <div align="center">
   <img src="img/digi_lab2_p6main.jpg" alt="FPGA Output 2" width="400"/><br>
-  <em>Figure 15: .</em>
+  <em>Figure 23: .</em>
 </div>
 
 <div align="center">
   <img src="img/digi_lab2_p6a.jpg" alt="FPGA Output 1" width="400"/><br>
-  <em>Figure 16: .</em>
+  <em>Figure 24: .</em>
 </div>
 
 <div align="center">
   <img src="img/digi_lab2_p6b.jpg" alt="FPGA Output 2" width="400"/><br>
-  <em>Figure 17:.</em>
+  <em>Figure 25:.</em>
 </div>
 <div align="center">
   <img src="img/thumbnail_IMG_1366.jpg" alt="FPGA Output 2" width="400"/><br>
-  <em>Figure 20: FPGA displaying output for test case A.</em>
+  <em>Figure 26: FPGA displaying output for test case A.</em>
 </div>
 
 <div align="center">
   <img src="img/thumbnail_IMG_1367.jpg" alt="FPGA Output 3" width="400"/><br>
-  <em>Figure 21: FPGA displaying output for test case B.</em>
+  <em>Figure 27: FPGA displaying output for test case B.</em>
 </div>
 
 <div align="center">
   <img src="img/thumbnail_IMG_1368.jpg" alt="FPGA Output 3" width="400"/><br>
-  <em>Figure 22: FPGA displaying output for test case C.</em>
+  <em>Figure 28: FPGA displaying output for test case C.</em>
 </div>
 
 
@@ -156,13 +156,27 @@
 
 ## Part VII
 <div align="center">
+  <img src="img/digi_lab2_p7main.jpg" alt="FPGA Output 2" width="400"/><br>
+  <em>Figure 29: .</em>
+</div>
+
+<div align="center">
+  <img src="img/digi_lab2_p7a.jpg" alt="FPGA Output 3" width="400"/><br>
+  <em>Figure 30: .</em>
+</div>
+
+<div align="center">
+  <img src="img/digi_lab2_p7a.jpg" alt="FPGA Output 3" width="400"/><br>
+  <em>Figure 31: .</em>
+</div>
+<div align="center">
   <img src="img/thumbnail_IMG_1369.jpg" alt="FPGA Output 2" width="400"/><br>
-  <em>Figure 20: FPGA displaying output for test case A.</em>
+  <em>Figure 32: FPGA displaying output for test case A.</em>
 </div>
 
 <div align="center">
   <img src="img/thumbnail_IMG_1370.jpg" alt="FPGA Output 3" width="400"/><br>
-  <em>Figure 21: FPGA displaying output for test case B.</em>
+  <em>Figure 33: FPGA displaying output for test case B.</em>
 </div>
 
 <div align="center">
