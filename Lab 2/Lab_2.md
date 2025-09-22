@@ -5,33 +5,36 @@
 
 
 ## Part I
+Verilog code was written to display hexadecimal digits 0-9 on four 7-segment displays (HEX3-HEX0) based on switch inputs (SW0-3). The code used Boolean expressions to manually derive the logic for each segment.
 <div align="center">
   <img src="img/digi_lab2_p1a.jpg" alt="FPGA Output 1" width="400"/><br>
   <em>Figure 1: Part 1 Verilog Code - Main Module.</em>
 </div>
-
 <div align="center">
-  <img src="img/digi_lab2_p2maina.jpg" alt="FPGA Output 2" width="400"/><br>
-  <em>Figure 2: Part 1 Verilog Code - 7 Segment Decoder Module.</em>
+  <img src="img/digi_lab2_p1b.jpg" alt="FPGA Output 2" width="600"/><br>
+  <em>Figure 2: Part 1 Verilog Code - Main Module cont. .</em>
 </div>
+
 
 
 ## Part II
+Verilog code was written to convert a 4-bit binary number (0-15) into two decimal digits for display. The code includes a comparator to check if the value was greater than 9 and uses multiplexers to control the output.
+<div align="center">
+  <img src="img/digi_lab2_p2maina.jpg" alt="FPGA Output 2" width="400"/><br>
+  <em>Figure 3: Part 1 Verilog Code - 7 Segment Decoder Module.</em>
+</div>
 <div align="center">
   <img src="img/digi_lab2_p2mainb.jpg" alt="FPGA Output 1" width="400"/><br>
-  <em>Figure 3: Part 1 Verilog Code - Main Module.</em>
+  <em>Figure 4: Part 1 Verilog Code - Main Module.</em>
 </div>
 
-<div align="center">
-  <img src="img/digi_lab2_p1b.jpg" alt="FPGA Output 2" width="600"/><br>
-  <em>Figure 4: Part 1 Verilog Code - Main Module cont. .</em>
-</div>
 
 [▶️ Watch the demo](digi_lab2.mp4)
 
 
 
 ## Part III
+Verilog code was written to implement a 4-bit ripple-carry adder using four full-adder modules connected in series. The circuit was designed to add two 4-bit binary numbers with a carry-in and produce a sum and carry-out.
 <div align="center">
   <img src="img/digi_lab2_p3main.jpg" alt="FPGA Output 1" width="500"/><br>
   <em>Figure 5: Part III Verilog Code - Main Module.</em>
@@ -39,7 +42,7 @@
 
 <div align="center">
   <img src="img/digi_lab2_p3FA.jpg" alt="FPGA Output 2" width="600"/><br>
-  <em>Figure 6: Part 1 Verilog Code - Full Adder Module.</em>
+  <em>Figure 6: Part III Verilog Code - Full Adder Module.</em>
 </div>
 <div align="center">
   <img src="img/digi_lab2_p3adder4a.jpg" alt="FPGA Output 1" width="300"/><br>
@@ -48,11 +51,12 @@
 
 <div align="center">
   <img src="img/digi_lab2_p3adder4b.jpg" alt="FPGA Output 2" width="200"/><br>
-  <em>Figure 8: Part 1 Verilog Code - Adder Module cont..</em>
+  <em>Figure 8: Part III Verilog Code - Adder Module cont..</em>
 </div>
 
 
 ## Part IV
+Verilog code was written to create a single-digit BCD (Binary Coded Decimal) adder that added two BCD digits (0-9) plus a carry-in to produce a two-digit BCD result. The code included error checking for invalid BCD inputs (values > 9)
 <div align="center">
   <img src="img/digi_lab2_p4main.jpg" alt="FPGA Output 1" width="500"/><br>
   <em>Figure 9: Part IV Verilog Code - Main Module.</em>
@@ -93,6 +97,7 @@
 
 
 ## Part V
+Verilog code was written to build a 2-digit BCD adder using two instances of the single-digit BCD adder from Part IV. The circuit was designed to add two 2-digit BCD numbers and produce a 3-digit BCD sum.
 <div align="center">
   <img src="img/digi_lab2_p5a.jpg" alt="FPGA Output 2" width="400"/><br>
   <em>Figure 17: .</em>
@@ -132,7 +137,8 @@
   <em>Figure 24: FPGA displaying output for test case C.</em>
 </div>
 
-## Part VI Remember to get RTL
+## Part VI
+Verilog code was written to redesign the 2-digit BCD adder using high-level Verilog constructs (if-else statements, comparison operators) instead of basic logic gates. This demonstrated algorithmic versus structural design approaches.
 <div align="center">
   <img src="img/digi_lab2_p6main.jpg" alt="FPGA Output 2" width="400"/><br>
   <em>Figure 25: .</em>
@@ -166,6 +172,7 @@
 
 
 ## Part VII
+Verilog code was written to create a 6-bit binary to 2-digit BCD converter that took a binary number (0-63) and displayed it as a decimal number on two 7-segment displays.
 <div align="center">
   <img src="img/digi_lab2_p7main.jpg" alt="FPGA Output 2" width="400"/><br>
   <em>Figure 31: .</em>
