@@ -11,13 +11,21 @@
 </div>
 
 <div align="center">
-  <img src="img/digi_lab2_p1b.jpg" alt="FPGA Output 2" width="600"/><br>
+  <img src="img/digi_lab2_p2maina.jpg" alt="FPGA Output 2" width="600"/><br>
   <em>Figure 2: Part 1 Verilog Code - 7 Segment Decoder Module.</em>
 </div>
 
 
 ## Part II
+<div align="center">
+  <img src="img/digi_lab2_p2mainb.jpg" alt="FPGA Output 1" width="400"/><br>
+  <em>Figure 1: Part 1 Verilog Code - Main Module.</em>
+</div>
 
+<div align="center">
+  <img src="img/digi_lab2_p1b.jpg" alt="FPGA Output 2" width="600"/><br>
+  <em>Figure 2: Part 1 Verilog Code - Main Module cont. .</em>
+</div>
 
 
 ## Part III
