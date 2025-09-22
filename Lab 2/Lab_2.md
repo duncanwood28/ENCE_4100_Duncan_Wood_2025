@@ -27,7 +27,8 @@
   <em>Figure 4: Part 1 Verilog Code - Main Module cont. .</em>
 </div>
 
-<video src="digi_lab2.mp4" controls width="600"></video>
+[▶️ Watch the demo](digi_lab2.mp4)
+
 
 
 ## Part III
