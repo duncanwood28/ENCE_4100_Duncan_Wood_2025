@@ -1,4 +1,6 @@
-
+# Lab 2: Numbers & Displays
+*Duncan Wood* <br>
+*09/16/2025*
 
 
 
