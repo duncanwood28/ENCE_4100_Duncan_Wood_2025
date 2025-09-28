@@ -5,11 +5,40 @@
 ---
 
 ## Part I
-
+<div align="center">
+  <img src="img/rs_latch.jpg" alt="Part I Verilog Code" width="400"/><br>
+  <em>Figure 1: RS Latch Module.</em>
+</div>
+<br>
+<div align="center">
+  <img src="img/rs_latch_main.jpg" alt="Part I Verilog Code" width="300"/><br>
+  <em>Figure 2: Part I Main.</em>
+</div>
 
 
 ## Part II
+<div align="center">
+  <img src="img/d_latch.jpg" alt="Part II Verilog Code" width="400"/><br>
+  <em>Figure 3: D Latch Module.</em>
+</div>
+<br>
+<div align="center">
+  <img src="img/d_latch_main.jpg" alt="Part II Verilog Code" width="400"/><br>
+  <em>Figure 4: Part II Main.</em>
+</div>
 
 
 
 ## Part III
+
+<div align="center">
+  <img src="img/d_flipflop.jpg" alt="Part II Verilog Code" width="200"/><br>
+  <em>Figure 3: D Flip Flop Module.</em>
+</div>
+<br>
+<div align="center">
+  <img src="img/d_flipflop_main.jpg" alt="Part II Verilog Code" width="300"/><br>
+  <em>Figure 4: Part III Main.</em>
+</div>
+
+## Part IV
