@@ -33,12 +33,18 @@
 
 <div align="center">
   <img src="img/d_flipflop.jpg" alt="Part II Verilog Code" width="200"/><br>
-  <em>Figure 3: D Flip Flop Module.</em>
+  <em>Figure 5: D Flip Flop Module.</em>
 </div>
 <br>
 <div align="center">
   <img src="img/d_flipflop_main.jpg" alt="Part II Verilog Code" width="300"/><br>
-  <em>Figure 4: Part III Main.</em>
+  <em>Figure 6: Part III Main.</em>
 </div>
 
 ## Part IV
+<div align="center">
+  <img src="img/advD_L3_p4_main.jpg" alt="Part IV Verilog Code" width="400"/><br>
+  <em>Figure 6: Part IV Verilog Code Main.</em>
+</div>
+
+## Part V
