@@ -115,4 +115,4 @@ Figure 18 shows the internal RTL layout.
 </div>
 
 ### Demos
-<video src="img/IMG_1382.mp4" controls width="600"></video>
+[▶️ Watch the demo](img/IMG_1382.mp4)
