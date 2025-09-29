@@ -113,3 +113,6 @@ Figure 18 shows the internal RTL layout.
   <img src="img/l3_p5b_rtl.jpg" alt="Part I Verilog Code" width="400"/><br>
   <em>Figure 18: RTL Layout .</em>
 </div>
+
+### Demos
+<video src="img/IMG_1382.mp4" controls width="600"></video>
