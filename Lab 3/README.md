@@ -4,7 +4,7 @@
 
 ---
 
-## Part I
+## Part I - Gated SR Latch
 <div align="center">
   <img src="img/rs_latch.jpg" alt="Part I Verilog Code" width="400"/><br>
   <em>Figure 1: RS Latch Module.</em>
@@ -16,7 +16,7 @@
 </div>
 
 
-## Part II
+## Part II - Gated D Latch
 <div align="center">
   <img src="img/d_latch.jpg" alt="Part II Verilog Code" width="400"/><br>
   <em>Figure 3: D Latch Module.</em>
@@ -29,7 +29,7 @@
 
 
 
-## Part III
+## Part III - Positive Edge Triggered D Flip Flop
 
 <div align="center">
   <img src="img/d_flipflop.jpg" alt="Part II Verilog Code" width="200"/><br>
