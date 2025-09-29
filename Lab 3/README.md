@@ -117,10 +117,10 @@ Figure 18 shows the internal RTL layout.
 </div>
 
 ### Demos
-[▶️ Decimal Number Demo 1](img/IMG_1382.mp4)
+[▶️ Demo 1](img/IMG_1382.mp4)
 <br>
-[▶️ Decimal Number Demo 2](img/IMG_1383.mp4)
+[▶️ Demo 2](img/IMG_1383.mp4)
 <br>
-[▶️ Hexadecimal Number Demo 1](img/IMG_1384.mp4)
+[▶️ Demo 3](img/IMG_1384.mp4)
 <br>
-[▶️ Hexadecimal Number Demo 2](img/IMG_1385.mp4)
+[▶️ Demo 4](img/IMG_1385.mp4)
