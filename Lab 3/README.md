@@ -81,6 +81,8 @@ Figure 11 below shows the RTL design for Part IV.
 
 ## Part V
 Figures 12 to 15 show the verilog code module for Part V to create a 16 bit hexidecimal display capable of storing the most recent number.
+<br>
+On the FPGA board, SW[3:2] determines which 7-seg display the character is displayed on, SW[7:4] determines what character goes on the designated 7-seg display. SW[8] changes between registers to display upper (A,B,C,D) and lower (0,1,2,3,...) hexadecimal characters. Sw[0] is the reset and SW[9] is the load.
 <div align="center">
   <img src="img/hex_storage_display_a.jpg" alt="Part I Verilog Code" width="400"/><br>
   <em>Figure 12: Module .</em>
@@ -115,4 +117,10 @@ Figure 18 shows the internal RTL layout.
 </div>
 
 ### Demos
-[▶️ Watch the demo](img/IMG_1382.mp4)
+[▶️ Decimal Number Demo 1](img/IMG_1382.mp4)
+<br>
+[▶️ Decimal Number Demo 2](img/IMG_1383.mp4)
+<br>
+[▶️ Hexadecimal Number Demo 1](img/IMG_1384.mp4)
+<br>
+[▶️ Hexadecimal Number Demo 2](img/IMG_1385.mp4)
