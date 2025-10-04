@@ -61,6 +61,11 @@ A ciruit with the same functionality as Part II was created using an LPM from th
 No noticeable differences were seen in the performance of this code compared to that of Part II.
 
 ## Part IV
+<p align="center">
+  <img src="img/
+Untitled video - Made with Clipchamp (7).gif" alt="Demo GIF" width="400"/><br>
+  <em>Figure 9:.</em>
+</p>
 
 
 ## Part V
