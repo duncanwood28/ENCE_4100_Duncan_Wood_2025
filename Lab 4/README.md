@@ -62,8 +62,11 @@ No noticeable differences were seen in the performance of this code compared to 
 
 ## Part IV
 <p align="center">
-  <img src="img/
-Untitled video - Made with Clipchamp (7).gif" alt="Demo GIF" width="400"/><br>
+  <img src="img/advD_lab4_4a.gif" alt="Demo GIF" width="400"/><br>
+  <em>Figure 9:.</em>
+</p>
+<p align="center">
+  <img src="img/advD_lab4_4b.gif" alt="Demo GIF" width="400"/><br>
   <em>Figure 9:.</em>
 </p>
 
