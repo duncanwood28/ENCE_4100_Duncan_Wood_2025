@@ -61,6 +61,15 @@ A ciruit with the same functionality as Part II was created using an LPM from th
 No noticeable differences were seen in the performance of this code compared to that of Part II.
 
 ## Part IV
+a verilog code was created that blinks digits 0-9 on HEX0 7-segment display in 1 second intervals, resetting and continuing in loops.
+<div align="center">
+  <img src="img/advD_lab4_p4a.jpg" alt="Part I Verilog Code" width="600"/><br>
+  <em>Figure 9: e.</em>
+</div>
+<div align="center">
+  <img src="img/advD_lab4_p4b.jpg" alt="Part I Verilog Code" width="400"/><br>
+  <em>Figure 10: e.</em>
+</div>
 <p align="center">
   <img src="img/advD_lab4_4a.gif" alt="Demo GIF" width="400"/><br>
   <em>Figure 9:.</em>
