@@ -27,14 +27,16 @@ Then the 8 bit flip flop module was instantiated into the top-level code and con
 
 
 ## Part II
+A 16 bit counter was created
 <div align="center">
   <img src="img/counter_16bit.jpg" alt="Part I Verilog Code" width="300"/><br>
   <em>Figure 4: 16 Bit Counter Module.</em>
 </div>
 <br>
+Next a shift register was created using the 16 bit counter module on the main code with 2 7-segment displays connected.
 <div align="center">
-  <img src="img/counter_16bit.jpg" alt="Part I Verilog Code" width="300"/><br>
-  <em>Figure 5: 16 Bit Counter Module.</em>
+  <img src="img/advD_l4_p2_main.jpg" alt="Part I Verilog Code" width="400"/><br>
+  <em>Figure 5: Part II Top-level Code.</em>
 </div>
 <br>
 
