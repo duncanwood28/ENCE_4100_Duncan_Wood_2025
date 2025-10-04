@@ -42,8 +42,12 @@ Next a shift register was created using the 16 bit counter module on the main co
 
 
 ## Part III
-
-
+A ciruit with the same functionality as Part II was created using an LPM from the Library of Parameterized modules to implement a 16-bit counter.
+<div align="center">
+  <img src="img/advD_l4_p3_main.jpg" alt="Part I Verilog Code" width="500"/><br>
+  <em>Figure 6: Part III Top-level Code.</em>
+</div>
+No noticeable differences were seen in the performance of this code compared to that of Part II.
 
 ## Part IV
 
