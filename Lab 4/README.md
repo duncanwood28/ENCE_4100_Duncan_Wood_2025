@@ -72,13 +72,36 @@ a verilog code was created that blinks digits 0-9 on HEX0 7-segment display in 1
 </div>
 <p align="center">
   <img src="img/advD_lab4_4a.gif" alt="Demo GIF" width="400"/><br>
-  <em>Figure 9:.</em>
+  <em>Figure 11:.</em>
 </p>
 <p align="center">
   <img src="img/advD_lab4_4b.gif" alt="Demo GIF" width="400"/><br>
-  <em>Figure 9:.</em>
+  <em>Figure 12:.</em>
 </p>
 
 
 ## Part V
-
+<div align="center">
+  <img src="img/advD_lab4_p5a.jpg" alt="Part I Verilog Code" width="400"/><br>
+  <em>Figure 13: .</em>
+</div>
+<div align="center">
+  <img src="img/advD_lab4_pba.jpg" alt="Part I Verilog Code" width="500"/><br>
+  <em>Figure 14: .</em>
+</div>
+<div align="center">
+  <img src="img/advD_lab4_pc.jpg" alt="Part I Verilog Code" width="300"/><br>
+  <em>Figure 15: .</em>
+</div>
+<div align="center">
+  <img src="img/advD_lab4_pd.jpg" alt="Part I Verilog Code" width="300"/><br>
+  <em>Figure 16: .</em>
+</div>
+<div align="center">
+  <img src="img/advD_lab4_pe.jpg" alt="Part I Verilog Code" width="300"/><br>
+  <em>Figure 17: .</em>
+</div>
+<div align="center">
+  <img src="img/advD_lab4_pf.jpg" alt="Part I Verilog Code" width="300"/><br>
+  <em>Figure 18: .</em>
+</div>
