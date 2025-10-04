@@ -105,3 +105,7 @@ a verilog code was created that blinks digits 0-9 on HEX0 7-segment display in 1
   <img src="img/advD_lab4_pf.jpg" alt="Part I Verilog Code" width="300"/><br>
   <em>Figure 18: .</em>
 </div>
+<p align="center">
+  <img src="img/IMG_1395.gif" alt="Demo GIF" width="400"/><br>
+  <em>Figure 19:.</em>
+</p>
