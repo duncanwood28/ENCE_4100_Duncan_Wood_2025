@@ -25,10 +25,16 @@ Then the 8 bit flip flop module was instantiated into the top-level code and con
 <br>
 
 
+
 ## Part II
 <div align="center">
-  <img src="img/advD_l4_p1_main.jpg" alt="Part I Verilog Code" width="500"/><br>
+  <img src="img/counter_16bit.jpg" alt="Part I Verilog Code" width="300"/><br>
   <em>Figure 4: 16 Bit Counter Module.</em>
+</div>
+<br>
+<div align="center">
+  <img src="img/counter_16bit.jpg" alt="Part I Verilog Code" width="300"/><br>
+  <em>Figure 5: 16 Bit Counter Module.</em>
 </div>
 <br>
 
