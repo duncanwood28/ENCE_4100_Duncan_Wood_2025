@@ -74,3 +74,12 @@
 </div>
 
 ## Part V
+<div align="center">
+  <img src="img/advD_adder_tree1.jpg" alt="Part I Adder/Subtractor Verilog" width="500"/><br>
+  <em>Figure 13: Adder Tree </em>
+</div>
+<div align="center">
+  <img src="img/advD_adder_tree2.jpg" alt="Part I Adder/Subtractor Verilog" width="500"/><br>
+  <em>Figure 14: Adder Tree Continued </em>
+</div>
+
