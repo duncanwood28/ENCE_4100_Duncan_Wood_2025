@@ -83,18 +83,24 @@ The top-level module multiplies an 8-bit input from switches by a fixed value of
   <img src="img/advD_lab5_mult8x8b.jpg" alt="Part I Adder/Subtractor Verilog" width="300"/><br>
   <em>Figure 12: 8 x 8 Multiplier continued </em>
 </div>
+<div align="center">
+  <img src="img/advD_lab5_p5b.jpg" alt="Part I Adder/Subtractor Verilog" width="700"/><br>
+  <em>Figure 13: Quartus RTL View </em>
+</div>
+Based on the Quartus RTL diagram shown in figure 13, there are 11 elements.
+
 
 ## Part V
 A new 8x8 multiplier was created with the same functionality as Part IV but using the Adder Tree method instead of the Ripple-Carry method.
 <div align="center">
   <img src="img/advD_adder_tree1.jpg" alt="Part I Adder/Subtractor Verilog" width="500"/><br>
-  <em>Figure 13: Adder Tree </em>
+  <em>Figure 14: Adder Tree </em>
 </div>
 The generate block creates a "loop" that instantiates multiple copies of identical logic, resulting in 8 partial product wires.
 <br>
 The block builds the partial product array without having to write out eight repetitive lines.
 <div align="center">
   <img src="img/advD_adder_tree2.jpg" alt="Part I Adder/Subtractor Verilog" width="500"/><br>
-  <em>Figure 14: Adder Tree Continued </em>
+  <em>Figure 15: Adder Tree Continued </em>
 </div>
 The parallel summations are created by structuring the given tree using defined wires.
