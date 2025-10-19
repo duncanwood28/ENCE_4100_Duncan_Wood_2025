@@ -42,21 +42,27 @@ Next the output logic is declared using a case statement. The case statement run
 </div>
 
 ## Top-Level Code
+The inputs and outputs are assigned to FPGA elements (i.e. switches, LEDs, buttons, and 7-segment displays). Wires are also set up to connect said elements.
 <div align="center">
   <img src="img/chess_main1.jpg" alt="Top-Level Verilog" width="500"/><br>
   <em>Figure 5: Top-Level Verilog </em>
 </div>
+<br>
+The chess timer fsm module and the 1 second counter are instantiated inside the top-level code.
 <br>
 <div align="center">
   <img src="img/chess_main2.jpg" alt="Top-Level Verilog" width="500"/><br>
   <em>Figure 6: Top-Level Verilog </em>
 </div>
 <br>
+Next the two n-bit counters are instanstiated inside the top-level code for the two timers.
+<br>
 <div align="center">
   <img src="img/chess_main3.jpg" alt="Top-Level Verilog" width="500"/><br>
   <em>Figure 7: Top-Level Verilog </em>
 </div>
 <br>
+And last, the display control for the 7-segment displays is instantiated to display the timers.
 <div align="center">
   <img src="img/chess_main4.jpg" alt="Top-Level Verilog" width="500"/><br>
   <em>Figure 8: Top-Level Verilog </em>
