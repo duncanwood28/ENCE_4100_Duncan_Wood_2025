@@ -4,6 +4,6 @@
 
 ## FSM Derivation
 <div align="center">
-  <img src="img/" alt="FSM Diagram" width="300"/><br>
+  <img src="img/FSM_diagram.jpg" alt="FSM Diagram" width="500"/><br>
   <em>Figure 1: FSM Diagram </em>
 </div>
