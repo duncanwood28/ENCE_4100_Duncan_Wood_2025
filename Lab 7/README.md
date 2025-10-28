@@ -40,16 +40,24 @@ An always statement is used to determine if the display is in a blinking state.
 
 
 ## Top-Level Main
+The UART receiver is instantiated.
+<br>
 <div align="center">
   <img src="img/ad_L7_main1.jpg" alt="Top Level 1" width="400"/><br>
   <em>Figure 5: Lab 7 Main </em>
 </div>
+<br>
+Next the UART transmitter and 7-segment character display modules are defined. 
+<br>
+The bytes received are stored and displayed using LEDs.
+<br>
 <br>
 <div align="center">
   <img src="img/ad_L7_main2.jpg" alt="Top Level 2" width="350"/><br>
   <em>Figure 6: Lab 7 Main </em>
 </div>
 <br>
+Lastly, the word detector FSM module is instantiated.
 <div align="center">
   <img src="img/ad_L7_main3.jpg" alt="Top Level 3" width="400"/><br>
   <em>Figure 7: Lab 7 Main </em>
