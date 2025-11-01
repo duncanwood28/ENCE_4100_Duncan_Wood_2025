@@ -99,6 +99,18 @@
 </div>
 
 ### Program Counter
+<div align="center">
+  <img src="img/progcounter_logisim.jpg" alt="" width="600"/><br>
+  <em>Figure 1: Program Counter Logisim </em>
+</div>
+<div align="center">
+  <img src="img/progcounter_verilog.jpg" alt="" width="300"/><br>
+  <em>Figure 1: Program Counter Register Verilog </em>
+</div>
+<div align="center">
+  <img src="img/progcounter_rtl.jpg" alt="" width="600"/><br>
+  <em>Figure 1: Program Counter Quartus RTL </em>
+</div>
 
 ### ROM Memory
 
