@@ -1,4 +1,4 @@
-# Lab 8: Simple Processor with UART
+# Lab 8: Very Simple Mircroprocessor (VSM) with UART
 *Duncan Wood* <br>
 *10/27/2025*
 
