@@ -6,6 +6,10 @@
 
 
 ## Simple Processor
+<div align="center">
+  <img src="img/vsm_logisim.jpg" alt="VSM Logisim" width="600"/><br>
+  <em>Figure 1: Very Simple Microprocessor </em>
+</div>
 
 ### Instruction Control FSM
 
