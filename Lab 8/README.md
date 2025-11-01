@@ -2,14 +2,39 @@
 *Duncan Wood* <br>
 *10/27/2025*
 
-## Overview
-
-
 ## Simple Processor
+The Very Simple Microprocessor (VSM) is a minimal CPU that operates by repeatedly fetching instructions from memory, decoding what operation to perform, and then executing that operation using registers, an arithmetic logic unit (ALU), and a shared internal data bus. The VSM can perform basic arithmetic (addition and subtraction), move data between registers, and handle simple input and output operations. Control of the system is managed by a finite state machine (FSM), which generates the timing and control signals that coordinate all components.
+<br>
+<br>
 <div align="center">
   <img src="img/vsm_logisim.jpg" alt="VSM Logisim" width="600"/><br>
   <em>Figure 1: Very Simple Microprocessor </em>
 </div>
+<br>
+<br>
+The top-level code instansiates all of the componenets together, each of them communicating through a shared internal bus labeled "w_IB_BUS". The nine componenets included are:
+<br>
+<br>
+- Accumulator A & B: Temporaray Data Registers
+<br>
+<br>
+- Arithmetic Logic Unit (ALU): performs mathematical aritmic, in this case addition and subtraction.
+<br>
+<br>
+- In and Out Registers: handle data moving in and out of switches and displays.
+<br>
+<br>
+- Instruction Register:  Stores the current instruction and operand.
+<br>
+<br>
+- Program Counter: tracks which instruction to fetch next.
+<br>
+<br>
+- ROM Memory - stores the instruction sequence.
+<br>
+<br>
+- FSM: the control unit generating timing and control signals.
+
 
 <div align="center">
   <img src="img/vsm_main1.jpg" alt="VSM Logisim" width="300"/><br>
