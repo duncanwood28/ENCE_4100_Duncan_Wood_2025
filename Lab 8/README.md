@@ -12,6 +12,10 @@
 </div>
 
 ### Instruction Control FSM
+<div align="center">
+  <img src="img/vsm_fsm_logisim.jpg" alt="VSM Logisim" width="700"/><br>
+  <em>Figure 1: VSM FSM Logisim </em>
+</div>
 
 
 ### Accumulator A
@@ -113,6 +117,18 @@
 </div>
 
 ### ROM Memory
+<div align="center">
+  <img src="img/rom_logisim.jpg" alt="" width="300"/><br>
+  <em>Figure 1: ROM Logisim </em>
+</div>
+<div align="center">
+  <img src="img/rom_verilog.jpg" alt="" width="400"/><br>
+  <em>Figure 1: ROM Register Verilog </em>
+</div>
+<div align="center">
+  <img src="img/rom_rtl.jpg" alt="" width="300"/><br>
+  <em>Figure 1: ROM Quartus RTL </em>
+</div>
 
 
 
