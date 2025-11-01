@@ -16,6 +16,47 @@
   <img src="img/vsm_fsm_logisim.jpg" alt="VSM Logisim" width="700"/><br>
   <em>Figure 1: VSM FSM Logisim </em>
 </div>
+<div align="center">
+  <img src="img/vsm_fsm1.jpg" alt="VSM Verilog" width="600"/><br>
+  <em>Figure 1: VSM FSM Verilog Module </em>
+</div>
+<div align="center">
+  <img src="img/vsm_fsm2.jpg" alt="VSM Verilog" width="300"/><br>
+  <em>Figure 1: VSM FSM Verilog Module </em>
+</div>
+<div align="center">
+  <img src="img/vsm_fsm3.jpg" alt="VSM Verilog" width="300"/><br>
+  <em>Figure 1: VSM FSM Verilog Module </em>
+</div>
+<div align="center">
+  <img src="img/vsm_fsm4.jpg" alt="VSM Verilog" width="300"/><br>
+  <em>Figure 1: VSM FSM Verilog Module </em>
+</div>
+<div align="center">
+  <img src="img/vsm_fsm5.jpg" alt="VSM Verilog" width="300"/><br>
+  <em>Figure 1: VSM FSM Verilog Module </em>
+</div>
+<div align="center">
+  <img src="img/vsm_fsm6.jpg" alt="VSM Verilog" width="300"/><br>
+  <em>Figure 1: VSM FSM Verilog Module </em>
+</div>
+<div align="center">
+  <img src="img/vsm_fsm7.jpg" alt="VSM Verilog" width="300"/><br>
+  <em>Figure 1: VSM FSM Verilog Module </em>
+</div>
+<div align="center">
+  <img src="img/vsm_fsm8.jpg" alt="VSM Verilog" width="250"/><br>
+  <em>Figure 1: VSM FSM Verilog Module </em>
+</div>
+
+<div align="center">
+  <img src="img/vsm_fsm_rtl.jpg" alt="VSM Verilog" width="500"/><br>
+  <em>Figure 1: VSM FSM Quartus RTL </em>
+</div>
+<div align="center">
+  <img src="img/vsm_fsm_fsm.jpg" alt="VSM Verilog" width="600"/><br>
+  <em>Figure 1: VSM FSM Quartus State Machine View </em>
+</div>
 
 
 ### Accumulator A
