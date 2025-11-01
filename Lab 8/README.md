@@ -93,6 +93,10 @@
   <img src="img/InstrReg_verilog.jpg" alt="" width="400"/><br>
   <em>Figure 1: Instruction Register Verilog </em>
 </div>
+<div align="center">
+  <img src="img/InstrReg_rtl.jpg" alt="" width="500"/><br>
+  <em>Figure 1: Instruction Register Quartus RTL </em>
+</div>
 
 ### Program Counter
 
