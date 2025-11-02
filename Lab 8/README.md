@@ -8,7 +8,7 @@
 - [Accumulator A](#AccumulatorA)
 - [Accumulator B](#AccumulatorB)
 - [Arithmetic Unit](#ArithmeticUnit)
-- [In Register](#InRegister)\
+- [In Register](#InRegister)
 - [Out Register](#OutRegister)
 - [Instruction Register](#InstructionRegister)
 - [Program Counter](#ProgramCounter)
