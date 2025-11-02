@@ -454,19 +454,24 @@ The 7-Segment decoder is used to decode the 4-bit number character into the nece
   <em>Figure 52: UART Transmitter Verilog Module </em>
 </div>
 
+### Baud Rate Tick Generator
+<div align="center">
+  <img src="img/baudtickgen.jpg" alt="" width="900"/><br>
+  <em>Figure 53: Baud Rate Tick Generator Verilog Module </em>
+</div>
 
 ### UART Sender FSM
 <div align="center">
   <img src="img/uart_send_fsm1.jpg" alt="" width="500"/><br>
-  <em>Figure 53: UART Sender FSM Verilog Module </em>
-</div>
-<div align="center">
-  <img src="img/uart_send_fsm2.jpg" alt="" width="500"/><br>
   <em>Figure 54: UART Sender FSM Verilog Module </em>
 </div>
 <div align="center">
-  <img src="img/uart_send_fsm3.jpg" alt="" width="500"/><br>
+  <img src="img/uart_send_fsm2.jpg" alt="" width="500"/><br>
   <em>Figure 55: UART Sender FSM Verilog Module </em>
+</div>
+<div align="center">
+  <img src="img/uart_send_fsm3.jpg" alt="" width="500"/><br>
+  <em>Figure 56: UART Sender FSM Verilog Module </em>
 </div>
 
 
