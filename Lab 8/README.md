@@ -69,23 +69,18 @@ The top-level code instansiates all of the componenets together, each of them co
   <em>Figure 8: VSM Top-Level Code </em>
 </div>
 
-- 1. FETCH (Phase 1-2)
-- Program Counter outputs an address to ROM
-- ROM returns 8-bit instruction which is loaded into the Instriction Register.
-- FSM increments the program counter
-- 2. DECODE (Phase 2)
-- FSM reads the instruction code from the instruction register.
-- 3. EXECUTE (Phase 3-4)
-- Depending on the instruction code, FSM enables appropriate modules:
-- ALU for arithmetic
-- In/Out Registers for input/output data.
-- Accumulators for storage
-- Data moves through the shared bus controlled by the tri-state.
-- 4. NEXT INSTRUCTION
--  FSM cycles back to fetch the next ROM instruction.
+
 
 ### Instruction Control FSM
 The Controll Unit aka Finite State Machine is essentially the brain of the CPU, coordinating all of the other modules.
+<br>
+<br>
+
+
+<div align="center">
+  <img src="img/vsm_fsm_logisim.jpg" alt="VSM Logisim" width="700"/><br>
+  <em>Figure 9: VSM FSM Logisim </em>
+</div>
 <br>
 <br>
 The states of the FSM are:
@@ -108,11 +103,23 @@ This follows the following for instruction decoding:
 |0100                        |IN       |read from input |
 |0101                        |LDA      |load from memory |
 
+The FSM follows the following sequence of operations.
 
-<div align="center">
-  <img src="img/vsm_fsm_logisim.jpg" alt="VSM Logisim" width="700"/><br>
-  <em>Figure 9: VSM FSM Logisim </em>
-</div>
+- FETCH (Phase 1-2)
+- 1. Program Counter outputs an address to ROM
+- 2. ROM returns 8-bit instruction which is loaded into the Instriction Register.
+- 3. FSM increments the program counter
+- DECODE (Phase 2)
+- 1. FSM reads the instruction code from the instruction register.
+- EXECUTE (Phase 3-4)
+- 1. Depending on the instruction code, FSM enables appropriate modules:
+- 2. ALU for arithmetic
+- 3. In/Out Registers for input/output data.
+- 4. Accumulators for storage
+- 5. Data moves through the shared bus controlled by the tri-state.
+- NEXT INSTRUCTION
+-  1. FSM cycles back to fetch the next ROM instruction.
+
 <div align="center">
   <img src="img/vsm_fsm1.jpg" alt="VSM Verilog" width="600"/><br>
   <em>Figure 10: VSM FSM Verilog Module </em>
@@ -145,6 +152,22 @@ This follows the following for instruction decoding:
   <img src="img/vsm_fsm8.jpg" alt="VSM Verilog" width="250"/><br>
   <em>Figure 17: VSM FSM Verilog Module </em>
 </div>
+<br>
+<br>
+The FSM makes the processor perform the following specific set of instruction code operations
+
+| Address | Instruction (Hex) | Operation Code (bin) | Operand (bin) | Operation |
+|---------|-------------------|----------------------|---------------|-----------|
+| 0       | 55                | 0101                 | 0101          | LDA 5: Load A with 5 |
+| 1       | 12                | 0001                 | 0010          | ADD 2: Add 2 to A    |
+| 2       | 30                | 0011                 | 0000          | OUT 0: Output Result |
+| 3       | 28                | 0010                 | 1000          | SUB 8: Subtract 8 from A|
+| 4       | 30                | 0011                 | 0000          | OUT 0: Output result |
+| 5       | 40                | 0100                 | 0000          | IN 0: Input from Switch|
+| 6       | 13                | 0001                 | 0011          | ADD 3: Add 3 to A    |
+| 7       | 30                | 0011                 | 0000          | OUT 0: Output Result | 
+
+
 
 <div align="center">
   <img src="img/vsm_fsm_rtl.jpg" alt="VSM Verilog" width="500"/><br>
