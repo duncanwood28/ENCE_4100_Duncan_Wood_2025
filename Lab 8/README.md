@@ -591,10 +591,38 @@ Operation Sequence
 <br>
 
 ### Baud Rate Tick Generator
+
+The BaudTickGen module generates a precise timing tick signal used by the UART transmitter and receiver to control when bits are sent or sampled.
+<br>
+<br>
+It divides the high-frequency FPGA system clock (50 MHz) down to a much lower baud rate frequency (115200 Hz).
+<br>
+<br>
+
 <div align="center">
   <img src="img/baudtickgen.jpg" alt="" width="900"/><br>
   <em>Figure 53: Baud Rate Tick Generator Verilog Module </em>
 </div>
+
+Operations
+1. Calculate Bit Widths
+   1. Computes the number of bits needed to represent a value |log_2(v)|
+   2. Later used to size internal counters.
+2. Define Local Parameters
+   1. Determines the width of the accumulator register Acc
+   2. The extra 8 bits allow better precision.
+   3. localparam AccWidth = log2(ClkFrequency / Baud) + 8;
+3. Compute Increment Value
+   1. Inc = the step size added to the accumulator each clock.
+   2. This determines how often the accumulator iterates to produce a tick.
+4. Accumulator Logic
+   1. Each clock cycle adds Inc to the accumulator.
+   2. When Acc overflows, it generates a tick.
+   3. When enable=0: the accumulator resets to the increment value (no ticks)
+   4. When enable=1: it keeps counting, outputting periodic ticks.
+5. Generate Tick Output
+   1. The MSB of the accumulator acts as the tick signal.
+   2. It toggles high for one cycle whenever the accumulator rolls, creating a precise periodic pulse.
 
 ### UART Sender FSM
 This module controls the UART transmitter to send the VSM output to the serial terminal.
