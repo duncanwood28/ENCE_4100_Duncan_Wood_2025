@@ -69,6 +69,21 @@ The top-level code instansiates all of the componenets together, each of them co
   <em>Figure 8: VSM Top-Level Code </em>
 </div>
 
+- 1. FETCH (Phase 1-2)
+- Program Counter outputs an address to ROM
+- ROM returns 8-bit instruction which is loaded into the Instriction Register.
+- FSM increments the program counter
+- 2. DECODE (Phase 2)
+- FSM reads the instruction code from the instruction register.
+- 3. EXECUTE (Phase 3-4)
+- Depending on the instruction code, FSM enables appropriate modules:
+- ALU for arithmetic
+- In/Out Registers for input/output data.
+- Accumulators for storage
+- Data moves through the shared bus controlled by the tri-state.
+- 4. NEXT INSTRUCTION
+-  FSM cycles back to fetch the next ROM instruction.
+
 ### Instruction Control FSM
 The Controll Unit aka Finite State Machine is essentially the brain of the CPU, coordinating all of the other modules.
 <br>
