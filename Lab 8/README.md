@@ -518,11 +518,36 @@ Operations Sequence
   
 
 ### UART Transmitter
+The asynchronous transmitter takes an 8-bit byte (TxD_data) and sends it over TxD with a start but, 8 data bits, and two stop bits.
+<br>
+<br>
 
 <div align="center">
   <img src="img/async_transmitter1.jpg" alt="" width="1000"/><br>
   <em>Figure 50: UART Transmitter Verilog Module </em>
 </div>
+<br>
+<br>
+
+| Signal | Input/Output | Function |
+|--------|--------------|----------|
+| clk    | in         | System Clock |
+| TxD_start | in      | Pulse to start transmission |
+| TxD_data[7:0] | in  | Byte to send |
+| TxD    | out        | Serial output line |
+| TxD_busy | out      | High While sending data |
+
+<br>
+<br>
+
+Parameters
+- ClkFrequency = 50MHz (System clock frequency)
+- Baud = 115200 (Baud Rate for sampling)
+
+<br>
+<br>
+
+
 <div align="center">
   <img src="img/async_transmitter2.jpg" alt="" width="700"/><br>
   <em>Figure 51: UART Transmitter Verilog Module </em>
@@ -531,6 +556,34 @@ Operations Sequence
   <img src="img/async_transmitter3.jpg" alt="" width="800"/><br>
   <em>Figure 52: UART Transmitter Verilog Module </em>
 </div>
+<br>
+<br>
+
+Operation Sequence
+- Baud Tick Generation
+  1. Produces a pulse BitTick every 1/Baud seconds
+  2. Controls when each bit is sent.
+- State Machine
+  1. TxD_state (4-bits) controls which bit to send
+  2. 1. 0000: idle
+     2. 0100: start bit
+     3. 1000-1111: data bits (8)
+     4. 0010-0011: stop bits (2)
+  3. Each transition happens when BitTick = 1 (High)
+- Shift Register
+  1. TxD_shift <= (TxD_shift >> 1);
+  2. Holds the byte to send
+  3. Shifts out one bit at a time
+- Output Logic
+  1. assign TxD = (TxD_state < 4) | (TxD_state[3] & TxD_shift[0]);
+  2. Start bit: low 0
+  3. Data bits: from shift register
+  4. Stop bits: high (1)
+- TxD_busy
+  1. Goes high when transmission starts, goes low after 2 stop bits.
+  2. assign TxD_busy = ~TxD_ready;
+
+
 
 ### Baud Rate Tick Generator
 <div align="center">
