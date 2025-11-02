@@ -371,6 +371,8 @@ Acts as memory for the instruction data, providing code for the VSM to execute.
 ### 7-Segment Dislay Module
 
 ### Demo
+![DEMO](img/vsm_demo1.gif)
+
 
 
 ## UART Integration
