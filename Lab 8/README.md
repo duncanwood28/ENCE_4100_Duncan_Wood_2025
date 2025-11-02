@@ -2,6 +2,35 @@
 *Duncan Wood* <br>
 *10/27/2025*
 
+## Table of Contents
+- [Simple Processor](#SimpleProcessor)
+- [Instruction Control FSM](#InstructionControlFSM)
+- [Accumulator A](#AccumulatorA)
+- [Accumulator B](#AccumulatorB)
+- [Arithmetic Unit](#ArithmeticUnit)
+- [In Register](#InRegister)\
+- [Out Register](#OutRegister)
+- [Instruction Register](#InstructionRegister)
+- [Program Counter](#ProgramCounter)
+- [ROM Memory](#ROMMemory)
+- [7-Segment Decoder Module](#7-SegmentDecoderModule)
+- [Demo 1](#Demo1)
+- [UART Integration](#UARTIntegration)
+- 1. [UART Receiver](##UARTReceiver)
+- 2. [UART Transmitter](##UARTTransmitter)
+- 3. [Baud Rate Tick Generator](##BaudRateTickGenerator)
+- 4. [UART Sender FSM](##UARTSenderFSM)
+  5. [Demo 2](##Demo2)
+
+
+
+
+
+
+
+
+
+
 ## Simple Processor
 The Very Simple Microprocessor (VSM) is a minimal CPU that operates by repeatedly fetching instructions from memory, decoding what operation to perform, and then executing that operation using registers, an arithmetic logic unit (ALU), and a shared internal data bus. The VSM can perform basic arithmetic (addition and subtraction), move data between registers, and handle simple input and output operations. Control of the system is managed by a finite state machine (FSM), which generates the timing and control signals that coordinate all components.
 <br>
@@ -410,7 +439,7 @@ The 7-Segment decoder is used to decode the 4-bit number character into the nece
 - The line `default_nettype none ensures all signals are explicitly declared.
 - Finally, `default_nettype wire resets that rule for other modules.
 
-### Demo
+### Demo 1
 ![DEMO](img/vsm_demo1.gif)
 
 
