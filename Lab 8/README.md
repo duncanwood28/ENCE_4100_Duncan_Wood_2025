@@ -418,11 +418,56 @@ The 7-Segment decoder is used to decode the 4-bit number character into the nece
 ## UART Integration
 
 ### UART Receiver
+<div align="center">
+  <img src="img/async_receiver1.jpg" alt="" width="800"/><br>
+  <em>Figure 45: UART Receiver Verilog Module </em>
+</div>
+<div align="center">
+  <img src="img/async_receiver2.jpg" alt="" width="800"/><br>
+  <em>Figure 46: UART Receiver Verilog Module </em>
+</div>
+<div align="center">
+  <img src="img/async_receiver3.jpg" alt="" width="700"/><br>
+  <em>Figure 47: UART Receiver Verilog Module </em>
+</div>
+<div align="center">
+  <img src="img/async_receiver4.jpg" alt="" width="700"/><br>
+  <em>Figure 48: UART Receiver Verilog Module </em>
+</div>
+<div align="center">
+  <img src="img/async_receiver5.jpg" alt="" width="800"/><br>
+  <em>Figure 49: UART Receiver Verilog Module </em>
+</div>
 
 ### UART Transmitter
 
-### UART Sender FSM
+<div align="center">
+  <img src="img/async_transmitter1.jpg" alt="" width="1000"/><br>
+  <em>Figure 50: UART Transmitter Verilog Module </em>
+</div>
+<div align="center">
+  <img src="img/async_transmitter2.jpg" alt="" width="700"/><br>
+  <em>Figure 51: UART Transmitter Verilog Module </em>
+</div>
+<div align="center">
+  <img src="img/async_transmitter3.jpg" alt="" width="800"/><br>
+  <em>Figure 52: UART Transmitter Verilog Module </em>
+</div>
 
+
+### UART Sender FSM
+<div align="center">
+  <img src="img/uart_send_fsm1.jpg" alt="" width="500"/><br>
+  <em>Figure 53: UART Sender FSM Verilog Module </em>
+</div>
+<div align="center">
+  <img src="img/uart_send_fsm2.jpg" alt="" width="500"/><br>
+  <em>Figure 54: UART Sender FSM Verilog Module </em>
+</div>
+<div align="center">
+  <img src="img/uart_send_fsm3.jpg" alt="" width="500"/><br>
+  <em>Figure 55: UART Sender FSM Verilog Module </em>
+</div>
 
 
 
