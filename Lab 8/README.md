@@ -139,9 +139,12 @@ This follows the following for instruction decoding:
   <img src="img/vsm_fsm_fsm.jpg" alt="VSM Verilog" width="600"/><br>
   <em>Figure 19: VSM FSM Quartus State Machine View </em>
 </div>
-
+<br>
+<br>
+Overall, the FSM runs through the fetch,decode, execute cycle, operating all of the data movements across the bus and running the timers.
 
 ### Accumulator A
+Stores one operand or result for the Arithmetic Logic Unit (ALU)
 <div align="center">
   <img src="img/AccumA_logisim.jpg" alt="" width="400"/><br>
   <em>Figure 20: Accumulator A Logisim </em>
@@ -150,6 +153,14 @@ This follows the following for instruction decoding:
   <img src="img/AccumA_verilog.jpg" alt="" width="400"/><br>
   <em>Figure 21: Accumulator A Verilog </em>
 </div>
+<br>
+<br>
+-  Sequential Logic: On each clock cycle, if LatchA is asserted, it loads a value from the internal bus (A input).
+<br>
+<br>
+-  Combinational Logic: When EnableA is asserted, its current value drives the bus.
+<br>
+<br>
 <div align="center">
   <img src="img/AccumulatorA_rtl.jpg" alt="" width="500"/><br>
   <em>Figure 22: Accumulator A Quartus RTL </em>
