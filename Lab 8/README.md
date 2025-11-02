@@ -391,7 +391,8 @@ The ROM implements read only memory (ROM) for operation instructions, 8 location
 <br>
 Acts as memory for the instruction data, providing code for the VSM to execute.
 
-### 7-Segment Dislay Module
+### 7-Segment Decoder Module
+
 
 ### Demo
 ![DEMO](img/vsm_demo1.gif)
