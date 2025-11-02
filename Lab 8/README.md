@@ -447,10 +447,31 @@ The 7-Segment decoder is used to decode the 4-bit number character into the nece
 ## UART Integration
 
 ### UART Receiver
+The asyncronous receiver receives serial data, reconstructs bytes, and signals when a full byte had been received.
+<br>
+<br>
+
 <div align="center">
-  <img src="img/async_receiver1.jpg" alt="" width="800"/><br>
+  <img src="img/async_receiver1.jpg" alt="" width="900"/><br>
   <em>Figure 45: UART Receiver Verilog Module </em>
 </div>
+<br>
+<br>
+
+| Signal | Input/Output | Function |
+|--------|--------------|----------|
+| clk    | in           | System Clock |
+| RxD    | in           | Serial input line |
+| RxD_data_ready | out  | High when data is received |
+| RxD_data[7:0] | out   | Received byte |
+| RxD_idle      | out   | High when system inactive |
+| RxD_endofpacket | out | High after a pause in data |
+<br>
+<br>
+
+With parameters
+- ClkFrequency = 50MHz 
+
 <div align="center">
   <img src="img/async_receiver2.jpg" alt="" width="800"/><br>
   <em>Figure 46: UART Receiver Verilog Module </em>
