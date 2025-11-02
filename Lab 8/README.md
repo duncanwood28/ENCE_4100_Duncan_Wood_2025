@@ -392,7 +392,23 @@ The ROM implements read only memory (ROM) for operation instructions, 8 location
 Acts as memory for the instruction data, providing code for the VSM to execute.
 
 ### 7-Segment Decoder Module
+The 7-Segment decoder is used to decode the 4-bit number character into the necessary 8-bit binary value needed for the hex displays.
+<br>
+<br>
+<div align="center">
+  <img src="img/vsm_7seg.jpg" alt="" width="300"/><br>
+  <em>Figure 44: 7-Segment Decoder Verilog Module </em>
+</div>
 
+- It converts a 4-bit number into the pattern needed for a 7-segment display.
+- i_bin (4 bits): the binary number wanted to display.
+- o_HEX (8-bit): controls which segments on the HEX display turn on or off.
+- The always @(*) block means the output changes instantly when the input changes. It doesn't depend on positive vs. negative edge clock signal.
+- The case statement checks the input value i_bin and assigns the correct segment pattern for digits 0-9 and letters A-F.
+- Each bit in o_HEX corresponds to one segment of the display
+- The bits are active low — a 0 turns a segment on, and a 1 turns it off.
+- The line `default_nettype none ensures all signals are explicitly declared.
+- Finally, `default_nettype wire resets that rule for other modules.
 
 ### Demo
 ![DEMO](img/vsm_demo1.gif)
