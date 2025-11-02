@@ -503,6 +503,8 @@ The 7-Segment decoder is used to decode the 4-bit number character into the nece
   <em>Figure 56: UART Sender FSM Verilog Module </em>
 </div>
 
+### Demo 2
+
 
 
 
