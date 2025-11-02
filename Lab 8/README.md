@@ -34,7 +34,11 @@ The top-level code instansiates all of the componenets together, each of them co
 <br>
 <br>
 - FSM: the control unit generating timing and control signals.
-
+<br>
+<br>
+7-segment displays are also set up to display the current 1-digit values of accummulators a and b, internal bus, user input, and final output (rOut).
+<br>
+<br>
 
 <div align="center">
   <img src="img/vsm_main1.jpg" alt="VSM Logisim" width="300"/><br>
@@ -66,6 +70,30 @@ The top-level code instansiates all of the componenets together, each of them co
 </div>
 
 ### Instruction Control FSM
+The Controll Unit aka Finite State Machine is essentially the brain of the CPU, coordinating all of the other modules.
+<br>
+<br>
+The states of the FSM are:
+
+- IDLE
+- PHASE 1: Fetch
+- Phase 2: Decode
+- Phase 3: Execute A
+- Phase 4: Execute B
+
+The FSM progresses through the states sequentially: fetch the instruction, decode instruction, execute the instruction, fetch the next instruction. 
+This follows the following for instruction decoding:
+
+| Instruction Code (ToInstr) | Meaning | Operation |
+|----------------------------|---------|-----------|
+|0000                        |NOP      |do nothing |
+|0001                        |ADD      |latch B, ALU add |
+|0010                        |SUB      |latch B, ALU subtract |
+|0011                        |OUT      |send to output |
+|0100                        |IN       |read from input |
+|0101                        |LDA      |load from memory |
+
+
 <div align="center">
   <img src="img/vsm_fsm_logisim.jpg" alt="VSM Logisim" width="700"/><br>
   <em>Figure 9: VSM FSM Logisim </em>
