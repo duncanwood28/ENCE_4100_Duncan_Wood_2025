@@ -470,7 +470,12 @@ The asyncronous receiver receives serial data, reconstructs bytes, and signals w
 <br>
 
 With parameters
-- ClkFrequency = 50MHz 
+- ClkFrequency = 50MHz (system clock frequency)
+- Baud = 115200 (Baud Rate)
+- Oversampling = 8 (samples RxD multiple times per bit for reliability)
+
+<br>
+<br>
 
 <div align="center">
   <img src="img/async_receiver2.jpg" alt="" width="800"/><br>
@@ -488,6 +493,29 @@ With parameters
   <img src="img/async_receiver5.jpg" alt="" width="800"/><br>
   <em>Figure 49: UART Receiver Verilog Module </em>
 </div>
+<br>
+<br>
+
+Operations Sequence
+- Baud Tick Generation
+  1. Generates ticks at Baud x Oversampling rate (8 x faster)
+- Input Synchronization
+- 1. Synchronizes RxD to the local clock
+  2. Uses a 2-bit counter to debounce the line and produce a clean RxD_bit.
+- Start Bit Detection
+  1. Detects a low 0 start bit, then begins sampling sequence.
+  2. if (~RxD_bit) RxD_state <= 4'b0001;
+- Sampling Data Bits
+  1. Samples once per bit at the middle of each bit period (sampleNow)
+  2. Each sample shifts into the register.
+  3. RxD_data <= {RxD_bit, RxD_data[7:1]};
+- Stop Bit Check
+  1. Valid byte only if stop bit = 1
+  2. RxD_data_ready <= (sampleNow && RxD_state==4'b0010 && RxD_bit);
+- End of Packet Detection
+  1. Measures gap length between characters using a counter
+  2. RxD_idle high when line stays idle for long enough.
+  
 
 ### UART Transmitter
 
