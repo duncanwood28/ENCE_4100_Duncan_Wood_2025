@@ -16,10 +16,10 @@
 - [7-Segment Decoder Module](#7-SegmentDecoderModule)
 - [Demo 1](#Demo1)
 - [UART Integration](#UARTIntegration)
-- 1. [UART Receiver](##UARTReceiver)
-- 2. [UART Transmitter](##UARTTransmitter)
-- 3. [Baud Rate Tick Generator](##BaudRateTickGenerator)
-- 4. [UART Sender FSM](##UARTSenderFSM)
+  1. [UART Receiver](##UARTReceiver)
+  2. [UART Transmitter](##UARTTransmitter)
+  3. [Baud Rate Tick Generator](##BaudRateTickGenerator)
+  4. [UART Sender FSM](##UARTSenderFSM)
   5. [Demo 2](##Demo2)
 
 
