@@ -515,7 +515,12 @@ Operations Sequence
 - End of Packet Detection
   1. Measures gap length between characters using a counter
   2. RxD_idle high when line stays idle for long enough.
-  
+
+<br>
+<br>
+***Note: asynchronous receiver not used in the code.
+<br>
+<br>
 
 ### UART Transmitter
 The asynchronous transmitter takes an 8-bit byte (TxD_data) and sends it over TxD with a start but, 8 data bits, and two stop bits.
@@ -584,9 +589,6 @@ Operation Sequence
   2. assign TxD_busy = ~TxD_ready;
 <br>
 <br>
-***Note: asynchronous transmitter not used in the code.
-<br>
-<br>
 
 ### Baud Rate Tick Generator
 <div align="center">
@@ -643,6 +645,16 @@ ASCII Conversion
   <img src="img/uart_send_fsm3.jpg" alt="" width="500"/><br>
   <em>Figure 56: UART Sender FSM Verilog Module </em>
 </div>
+<br>
+<br>
+
+FSM Behavior
+| State     | Action                                                      |
+|-----------|-------------------------------------------------------------|
+| UART_IDLE | Wait for enable_out and ensure transmitter is not busy. Latch input and load tx_data with its ASCII equivalent.|
+| UART_SEND | Assert tx_start = 1 for one cycle to start sending tx_data. Move to WAIT. |
+| UART_WAIT | Wait for tx_busy to go low to indicate the transmission is complete. Then prepare tx_data = 8'h0D for carriage return|
+| UART_CR   | Send carriage return then wrap back to IDLE |
 
 ### Demo 2
 
