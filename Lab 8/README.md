@@ -161,16 +161,28 @@ Stores one operand or result for the Arithmetic Logic Unit (ALU)
 -  Combinational Logic: When EnableA is asserted, its current value drives the bus.
 <br>
 <br>
+a tri-state bus is used (1'bz) to allow all of the component modules to share the one wire.
+<br>
+<br>
 <div align="center">
   <img src="img/AccumulatorA_rtl.jpg" alt="" width="500"/><br>
   <em>Figure 22: Accumulator A Quartus RTL </em>
 </div>
 
 ### Accumulator B
+Similarly to Accumulator A, Accumulator B store the second operand for the ALU.
 <div align="center">
   <img src="img/AccumB_logisim.jpg" alt="" width="500"/><br>
   <em>Figure 23: Accumulator B Logisim </em>
 </div>
+<br>
+<br>
+- Simpler than A: no bus drive.
+<br>
+<br>
+- On each clock, if LatchB is asserted, it captures B input.
+<br>
+<br>
 <div align="center">
   <img src="img/AccumB_verilog.jpg" alt="" width="300"/><br>
   <em>Figure 24: Accumulator B Verilog </em>
@@ -179,8 +191,14 @@ Stores one operand or result for the Arithmetic Logic Unit (ALU)
   <img src="img/AccumulatorB_rtl.jpg" alt="" width="500"/><br>
   <em>Figure 25: Accumulator B Quartus RTL </em>
 </div>
+<br>
+<br>
+Accumulator B simply feeds operand B, the second operand, to the ALU.
 
 ### Arithmetic Unit
+As its name suggests, the ALU  performs arithetic operations. For the purposes of this minimal CPU, only subtraction and addition can be done.
+<br>
+<br>
 <div align="center">
   <img src="img/AU_logisim.jpg" alt="" width="500"/><br>
   <em>Figure 26: Arithmetic Unit Logisim </em>
@@ -189,12 +207,28 @@ Stores one operand or result for the Arithmetic Logic Unit (ALU)
   <img src="img/AU_verilog.jpg" alt="" width="300"/><br>
   <em>Figure 27: Arithmetic Unit Verilog </em>
 </div>
+
+- Inputs A and B
+- Control: EnableALU (activate), AddSub (0 = add, 1 = subtract)
+- Outputs: Carry, IB_ALU
+- Behavior:
+- if disabled, outputs high impedance z.
+- if enabled, performs either A+B or A-B with carry output.
+ 
+
+
 <div align="center">
   <img src="img/ALU_rtl.jpg" alt="" width="500"/><br>
   <em>Figure 28: Arithmetic Unit Quartus RTL </em>
 </div>
+<br>
+<br>
+The Arithmetic Logic Unit executes the addition and subtraction operations for each instruction.
 
 ### In Register
+The In Register handles the inputs from the user switches.
+<br>
+<br>
 <div align="center">
   <img src="img/InReg_logisim.jpg" alt="" width="400"/><br>
   <em>Figure 29: In Register Logisim </em>
@@ -203,12 +237,22 @@ Stores one operand or result for the Arithmetic Logic Unit (ALU)
   <img src="img/InReg_verilog.jpg" alt="" width="400"/><br>
   <em>Figure 30: In Register Verilog </em>
 </div>
+
+- if EnableIn is high, drives the shared bus with DataIn
+- Else, the register releases the bus (z).
+
 <div align="center">
   <img src="img/Inregister_rtl.jpg" alt="" width="500"/><br>
   <em>Figure 31: In Register Quartus RTL </em>
 </div>
+<br>
+<br>
+Overall, the In register allows the VSM to read external inputs.
 
 ### Out Register
+the Out Register handles the outputs, in this case the outputs for the 7-segment displays and LEDs.
+<br>
+<br>
 <div align="center">
   <img src="img/OutReg_logisim.jpg" alt="" width="500"/><br>
   <em>Figure 32: Out Register Logisim </em>
@@ -217,12 +261,22 @@ Stores one operand or result for the Arithmetic Logic Unit (ALU)
   <img src="img/OutReg_verilog.jpg" alt="" width="300"/><br>
   <em>Figure 33: Out Register Verilog </em>
 </div>
+
+- For each clock cycle, if EnableOut is on, the register captures data from the shared bus IB_BUS.
+- Data output via rOut for LEDs and 7-segment displays
+
 <div align="center">
   <img src="img/Outregister_rtl.jpg" alt="" width="500"/><br>
   <em>Figure 34: Out Register Quartus RTL </em>
 </div>
+<br>
+<br>
+The Out Register stores and sends the output data from the system.
 
 ### Instruction Register
+The instruction register stores the current instruction data fetched from ROM.
+<br>
+<br>
 <div align="center">
   <img src="img/InstrReg_logisim.jpg" alt="" width="500"/><br>
   <em>Figure 35: Instruction Register Logisim </em>
@@ -231,12 +285,29 @@ Stores one operand or result for the Arithmetic Logic Unit (ALU)
   <img src="img/InstrReg_verilog.jpg" alt="" width="400"/><br>
   <em>Figure 36: Instruction Register Verilog </em>
 </div>
+
+- Inputs:
+- Instr = instruction code
+- Data = operand
+- Control:
+- LatchInstr loads Instr
+- EnableInstr places Data on the shared Bus
+- Output:
+- ToInstr is the latched instruction for FSM decoding.
+  
+
 <div align="center">
   <img src="img/InstrReg_rtl.jpg" alt="" width="500"/><br>
   <em>Figure 37: Instruction Register Quartus RTL </em>
 </div>
+<br>
+<br>
+The Instruction Register splits the instruction bytes and provides the control inputs to the FSM.
 
 ### Program Counter
+The program counter sequenctially points to memory addresses.
+<br>
+<br>
 <div align="center">
   <img src="img/progcounter_logisim.jpg" alt="" width="600"/><br>
   <em>Figure 38: Program Counter Logisim </em>
@@ -245,12 +316,23 @@ Stores one operand or result for the Arithmetic Logic Unit (ALU)
   <img src="img/progcounter_verilog.jpg" alt="" width="300"/><br>
   <em>Figure 39: Program Counter Register Verilog </em>
 </div>
+
+- On Clock:
+- If reset: clears to 0
+- If enabled: increments by 1
+- Output Counter feeds the ROM's address
+
 <div align="center">
   <img src="img/progcounter_rtl.jpg" alt="" width="600"/><br>
   <em>Figure 40: Program Counter Quartus RTL </em>
 </div>
 
+The Program Counter controls the flow of the fetch sequence, operating as a clock that the FSM uses to iterate through the control sequence.
+
 ### ROM Memory
+The ROM implements read only memory (ROM) for operation instructions, 8 locations with 8 bits each.
+<br>
+<br>
 <div align="center">
   <img src="img/rom_logisim.jpg" alt="" width="300"/><br>
   <em>Figure 41: ROM Logisim </em>
@@ -259,10 +341,17 @@ Stores one operand or result for the Arithmetic Logic Unit (ALU)
   <img src="img/rom_verilog.jpg" alt="" width="400"/><br>
   <em>Figure 42: ROM Register Verilog </em>
 </div>
+
+- High nibble = 4-bit instruction code
+- Low nibble = 4-bit Data
+
 <div align="center">
   <img src="img/rom_rtl.jpg" alt="" width="300"/><br>
   <em>Figure 43: ROM Quartus RTL </em>
 </div>
+<br>
+<br>
+Acts as memory for the instruction data, providing code for the VSM to execute.
 
 
 
