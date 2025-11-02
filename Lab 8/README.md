@@ -582,8 +582,11 @@ Operation Sequence
 - TxD_busy
   1. Goes high when transmission starts, goes low after 2 stop bits.
   2. assign TxD_busy = ~TxD_ready;
-
-
+<br>
+<br>
+***Note: asynchronous transmitter not used in the code.
+<br>
+<br>
 
 ### Baud Rate Tick Generator
 <div align="center">
@@ -592,10 +595,46 @@ Operation Sequence
 </div>
 
 ### UART Sender FSM
+This module controls the UART transmitter to send the VSM output to the serial terminal.
+<br>
+<br>
 <div align="center">
   <img src="img/uart_send_fsm1.jpg" alt="" width="500"/><br>
   <em>Figure 54: UART Sender FSM Verilog Module </em>
 </div>
+<br>
+<br>
+
+| Signal | Input/Output | Function |
+|--------|--------------|----------|
+| clk    | in           | System clock |
+| reset  | in           | Reset signal |
+| enable_out | in       | trigger to send data |
+| data_in[3:0] | in     | Nibble to send |
+| tx_busy      | in     | from async transmitter |
+| tx_start     | out    | Pulse to start UART send |
+| tx_data[7:0] | out    | Byte to send  |
+| state_dbg[1:0] | out  | Debug current FSM state |
+
+<br>
+<br>
+
+States
+- UART_IDLE = 2'b00;
+- UART_SEND = 2'b01;
+- UART_WAIT = 2'b10;
+- UART_CR = 2'b11; 
+
+<br>
+<br>
+
+ASCII Conversion
+- nibble_to_ascii conv (.nib(latched_data), .ascii(ascii_data));
+- Converts 4-bit hex value to ASCII for transmission.
+
+<br>
+<br>
+
 <div align="center">
   <img src="img/uart_send_fsm2.jpg" alt="" width="500"/><br>
   <em>Figure 55: UART Sender FSM Verilog Module </em>
