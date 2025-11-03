@@ -685,7 +685,8 @@ FSM Behavior
 | UART_CR   | Send carriage return then wrap back to IDLE |
 
 ### Demo 2
-
+![DEMO](img/vsm_uart_serial.gif)
+Keep in mind the video was sped up to fit as a gif and make it easier to embed inside this file.
 
 
 
