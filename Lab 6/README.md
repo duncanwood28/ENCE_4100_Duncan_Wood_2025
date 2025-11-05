@@ -2,6 +2,16 @@
 *Duncan Wood* <br>
 *10/14/2025*
 
+## Table of Contents
+- [Objective](#Objective)
+- [FSM Derivation](#FSMDerivation)
+- [Chess Timer FSM Module](#ChessTimerFSMModule)
+- [Top-Level Module](#Top-LevelModule)
+- [1 Second Counter](#1SecondCounter)
+- [N Bit Counter](#NBitCounter)
+- [Demonstation](#Demonstration)
+
+
 ## Objective
 The goal of this FSM verilog code is to act as a chess timer. The chess timer works by having two independent clock timers of equal time and speed, one for each of the two chess players. The timer starts out in a neutral or 'idle' state in which neither timer is active and doesn't start until one of the players presses the button to initiate their own timer. When one player's timer is active, the other one is paused. When one of the timers goes to zero, the game is over.
 <br>
@@ -86,3 +96,18 @@ And last, the display control for the 7-segment displays is instantiated to disp
   <img src="img/chess_main4.jpg" alt="Top-Level Verilog" width="500"/><br>
   <em>Figure 8: Top-Level Verilog </em>
 </div>
+
+## 1 Second Counter
+
+
+
+## N Bit Counter
+
+
+## Demonstration
+
+
+
+
+
+
