@@ -107,19 +107,27 @@ The objective of this lab was to develop a Verilog design that enables character
 
 <div align="center">
   <img src="img/hello_detector_1.jpg" alt="FSM" width="400"/><br>
-  <em>Figure 3: Word Detector FSM </em>
+  <em>Figure 17: Word Detector FSM </em>
 </div>
 <div align="center">
   <img src="img/hello_detector_2jpg.jpg" alt="FSM" width="400"/><br>
-  <em>Figure 3: Word Detector FSM </em>
+  <em>Figure 18: Word Detector FSM </em>
 </div>
 <div align="center">
   <img src="img/hello_detector_3jpg.jpg" alt="FSM" width="600"/><br>
-  <em>Figure 3: Word Detector FSM </em>
+  <em>Figure 19: Word Detector FSM </em>
 </div>
 <div align="center">
   <img src="img/hello_detector_4jpg.jpg" alt="FSM" width="300"/><br>
-  <em>Figure 3: Word Detector FSM </em>
+  <em>Figure 20: Word Detector FSM </em>
+</div>
+<div align="center">
+  <img src="img/hello_fsm_rtl.jpg" alt="FSM" width="700"/><br>
+  <em>Figure 21: Word Detector FSM RTL </em>
+</div>
+<div align="center">
+  <img src="img/hello_fsm_fsm.jpg" alt="FSM" width="700"/><br>
+  <em>Figure 22: Word Detector FSM </em>
 </div>
 
 
