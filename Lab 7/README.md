@@ -11,7 +11,7 @@
 - [Baud Rate Generator](#BaudRateGenerator)
 - [7-Segment Decoder](#7-SegmentDecoder)
 - [Word Detector FSM](#WordDetectorFSM)
-- [3-Second Counter](#3-SecondCounter)
+- [3-Second Counter and Blink Timer](#3-SecondCounterandBlinkTimer)
 - [Demonstration](#Demonstration)
 
 
