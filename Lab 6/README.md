@@ -98,10 +98,22 @@ And last, the display control for the 7-segment displays is instantiated to disp
 </div>
 
 ## 1 Second Counter
-
+<div align="center">
+  <img src="img/counter_1sa.jpg" alt="counter" width="400"/><br>
+  <em>Figure 9: 1 Second Counter </em>
+</div>
+<div align="center">
+  <img src="img/counter_1sb.jpg" alt="counter" width="400"/><br>
+  <em>Figure 10: 1 Second Counter </em>
+</div>
 
 
 ## N Bit Counter
+
+<div align="center">
+  <img src="img/counter_Nbit.jpg" alt="counter" width="400"/><br>
+  <em>Figure 11: N-Bit Counter </em>
+</div>
 
 
 ## Demonstration
