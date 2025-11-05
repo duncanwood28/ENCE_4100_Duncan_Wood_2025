@@ -98,6 +98,10 @@ And last, the display control for the 7-segment displays is instantiated to disp
 </div>
 
 ## 1 Second Counter
+Divides the 50 MHz system clock down to a 1 Hz strobe (o_strobe), effectively producing a “1 second tick.” This signal is used as the timing source for the player counters.
+<br>
+<br>
+
 <div align="center">
   <img src="img/counter_1sa.jpg" alt="counter" width="400"/><br>
   <em>Figure 9: 1 Second Counter </em>
@@ -107,13 +111,35 @@ And last, the display control for the 7-segment displays is instantiated to disp
   <em>Figure 10: 1 Second Counter </em>
 </div>
 
+- A 26-bits is used so the counter can go up to 50 million.
+- It counts up every 50 MHz clock cycle.
+- When it reaches 50M
+  - Resets the counter to 0.
+  - Toggles o_tick
+  - Sets o_strobe=1 for one clock cycle.
+The o_strobe pulse is the 1 Hz clock signal which is used for w_count in the top module.
+
 
 ## N Bit Counter
+The N-bit counter module is used for the timer for each player, player A and player B. They decrement every second while their respective player is active and stores the current value for when it is paused.
+<br>
+<br>
 
 <div align="center">
   <img src="img/counter_Nbit.jpg" alt="counter" width="400"/><br>
   <em>Figure 11: N-Bit Counter </em>
 </div>
+
+<br>
+<br>
+
+- i_clk: Driven by w_count, which ticks once per second.
+- i_rest: When w_load_counters[x] = 1, reloads to i_data
+- i_enable: Controlled by FSM; only the active player's counter decrements.
+- i_dir: Direction bit (0=down, 1=up)
+  - In the chess timer, both are configured as down counters (i_dir = 0)
+Each second, the active player’s counter decrements by 1 until reaching 0.
+
 
 
 ## Demonstration
