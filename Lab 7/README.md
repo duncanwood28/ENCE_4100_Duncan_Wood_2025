@@ -235,10 +235,43 @@ Each state is essentially waiting for a certain character to be entered before m
   <em>Figure 22: Word Detector FSM </em>
 </div>
 
-## 3-Seconds Counter
+## 3-Seconds Counter and Blink Timer
 A 3-second counter is created to keep the display (HELLO) blinking for 3-seconds after detection. Since the FPGA clock runs at 50 MHz, the design uses a counter-based timing system to measure that duration. This counter was implemented inside of the FSM rather than as an external module.
 <br>
 <br>
+<div align="center">
+  <img src="img/3sec_counter.jpg" alt="Counter" width="400"/><br>
+  <em>Figure 23: 3-Second Counter </em>
+</div>
+<br>
+<br>
+
+Clock Input
+- clk = 50 MHz
+Counter
+- The counter increments once per clock cycle while the FSM is in the DONE state.
+- Each clock tick adds 1 to the counter register.
+- It counts from 0 to 150,000,000
+- Since 50 million clocks = 1 second, 150 million clocks is about 3 seconds.
+- Once this threshold is reached
+  - counter_done is high
+  - FSM wraps back to IDLE
+  - Display stops entirely.
+<br>
+<br>
+
+Blink Timer
+<br>
+Separate counter blink_counter toggles the blink signal to flash the “HELLO” display.
+<br>
+- Increments every clock cycle during the DONE state.
+- When it reaches 25 M cycles:
+  - Toggles 'blink'
+  - Resets itself to 0
+- The display blinks on/off every 0.5 seconds.
+- One full blink period = 1 seconds.
+
+
 
 
 
