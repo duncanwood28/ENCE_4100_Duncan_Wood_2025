@@ -11,6 +11,7 @@
 - [7-Segment Decoder](#7-SegmentDecoder)
 - [5-Second Counter](#5-SecondCounter)
 - [Word Detector FSM](#WordDetectorFSM)
+- [Demonstration](#Demonstration)
 
 
 ## Objective
@@ -129,5 +130,12 @@ The objective of this lab was to develop a Verilog design that enables character
   <img src="img/hello_fsm_fsm.jpg" alt="FSM" width="700"/><br>
   <em>Figure 22: Word Detector FSM </em>
 </div>
+
+## Demonstration
+![DEMO](img/realterm_hello.gif)
+![DEMO](img/hello_board.gif)
+<br>
+Videos are not in sync with each other
+
 
 
