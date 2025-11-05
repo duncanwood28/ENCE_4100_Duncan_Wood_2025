@@ -105,7 +105,7 @@ And last, the display control for the 7-segment displays is instantiated to disp
 
 
 ## Demonstration
-
+![DEMO](img/chess_timer.gif)
 
 
 
