@@ -153,7 +153,22 @@ assign LEDR[2] = RxD_data_ready;
 
 All other LEDs remain unused and default to off.
 
+## UART Receiver
 
+
+## FSK Transmitter FSM
+
+
+## FSK Modulator
+
+
+## FSK Demodulator
+
+
+## UART Transmitter
+
+
+## 7-Segment Decoder
 
 
 
