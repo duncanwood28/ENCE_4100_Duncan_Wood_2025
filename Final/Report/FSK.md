@@ -192,6 +192,21 @@ Key details
 Overall the fsk transmit fsm is essentially a byte-to-bit serializer whose timing is controlled in clocks via SYMBOL_PERIOD. It presents a stable bit for the exact duration of one UART bit (as measured in FPGA clocks).
 
 ### Symbol Period Calculation
+To compute the required clocks per symbol, the following is used:
+- Clock frequency: 50 MHz
+- UART baud rate: 115200 symbols/second
+The symbol period (SYMBOL_PERIOD) is calculated using the formula
+- SYMBOL_PERIOD = Clk/Baud
+- = 50,000,000 / 115,200
+- = 434.0277778
+- SYMBOL_PERIOD = 434 clock cycles / symbol
+<br>
+<br>
+
+As mentioned previously, parameters were changed to make the FSK signal slow and noticeable on the oscilloscope for demonstration, thus the SYMBOL_PERIOD was incresed to a very high value (10M).
+<br>
+<br>
+In order for everything to synchronize with the UART baud and successfully encode/decode the bits, the calculated SYMBOL_PERIOD value needs to be used. 
 
 
 
@@ -264,10 +279,26 @@ Notes on Robustness
 - The chosen N0/N1 must produce a meaningful difference in edges per symbol (EDGES_HIGH - EDGES_LOW significantly bigger than jitter/noise).
 
 ## UART Transmitter
+The uart transmitter takes reconstructed bytes (demod_byte) from demodulator, serializes them and sends bits to the serial terminal (GPIO[33]) using UART timing (115200 baud). The uart transmitter closes the loop of the FSK system.
+<br>
+<br>
+Key Details
 
+- BaudTickGen produces BitTick at requested baud (or in simulation BitTick=1).
+- A small UART FSM sends start bit, 8 data bits LSB-first, and 2 stop bits (TX is configured for 2 stop bits in this code).
+- TxD_busy indicates when transmitter is busy.
+- The transmitter latches TxD_data on start and shifts it out on BitTick.
+- It exposes current_bit (used by FSK modulator in modifications in file) so it can drive modulator directly in some setups.
 
 ## 7-Segment Decoder
+The "char2seg" module maps ASCII byte (char) to 7-segment pattern (HEX0) for the on-board 7-seg display. This is purely for human convenience/debug: it displays the original received character (from UART RX) on board.
+<br>
+<br>
 
+Key Details
+
+- Lowercases uppercase letters (maps 65–90 to +32).
+- A case mapping enumerates ASCII codes for digits and lowercase letters to 7-seg bit patterns.
 
 
 
