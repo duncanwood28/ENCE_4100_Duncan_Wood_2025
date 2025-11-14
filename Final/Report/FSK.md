@@ -300,6 +300,7 @@ Key Details
 - Lowercases uppercase letters (maps 65–90 to +32).
 - A case mapping enumerates ASCII codes for digits and lowercase letters to 7-seg bit patterns.
 
+## Demos, Issues, and Future Work
 
 
 
