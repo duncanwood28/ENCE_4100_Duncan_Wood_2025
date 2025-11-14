@@ -81,6 +81,9 @@ async_receiver #(.ClkFrequency(50000000), .Baud(115200))
 
 ### FSK Transmit FSM
 
+<img src="https://raw.githubusercontent.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/main/Final/img/tx_fsm_block.jpg" alt="Top-Level" width="400"/>
+
+
 ```verilog
 fsk_tx_fsm #(.SYMBOL_PERIOD(SYMBOL_PERIOD))
     TX_FSM (.clk(CLOCK_50),
