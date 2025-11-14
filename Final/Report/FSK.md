@@ -2,6 +2,30 @@
 *Duncan Wood* <br>
 *11/14/2025*
 
+## Table of Contents
+- [Objective](#Objective)
+- [Top-Level Code / System Overview](#Top-LevelCode/systemOverview)
+  - [Module Header](#ModuleHeader)
+  - [Parameters](#Parameters)
+  - [Internal Wires](#InternalWires)
+  - [UART Receiver](#UARTReceiver)
+  - [FSK Transmit FSM](#FSKTransmitFSM)
+  - [FSK Modulator](#FSKModulator)
+  - [FSK Demodulator](#FSKDemodulator)
+  - [UART Transmitter](#UARTTransmitter)
+  - [7-Segment Display](#7-SegmentDisplay)
+  - [Assignments for Debugging](#AssignmentsforDebugging)
+- [UART Receiver](#UARTReceiver)
+- [FSK Transmit FSM](#FSKTransmitFSM)
+  - [Symbol Period Calculation](#SymbolPeriodCalculation)
+- [FSK Modulator](#FSKModulator)
+- [FSK Demodulator](#FSKDemodulator)
+- [UART Transmitter](#UARTTransmitter)
+- [7-Segment Display](#7-SegmentDisplay)
+- [Demos, Issues, and Future Work](#Demos,Issues,andFutureWork)
+  - [Identified Issues](#IdentifiedIssues)
+  - [Potential Solutions](#PotentialSolutions) 
+
 ## Objective
 The goal of this project was to design and implement a complete Frequency-Shift Keying (FSK) modem on an FPGA using a 50 MHz system clock. The system accepts asynchronous serial data from a PC, converts each received byte into a framed bitstream, and maps each bit to one of two discrete output frequencies using a toggle-based FSK modulator. This modulated waveform is looped back internally into an FSK demodulator, which classifies each symbol by counting waveform transitions and reconstructs the original byte stream for retransmission over UART. The project demonstrates an end-to-end digital communication link entirely in hardware—spanning byte framing, carrier modulation, symbol timing, and symbol decision logic—and provides an opportunity to explore practical synchronization challenges that arise when theoretical modulation schemes meet real hardware timing constraints.
 
