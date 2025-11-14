@@ -304,9 +304,12 @@ Key Details
 
 ## Demos, Issues, and Future Work
 
-<video src="Videos/fsk_2.mp4" width="600" controls></video>
 
-<video src="Videos/IMG_1444.MOV" width="600" controls></video>
+<video width="600" controls>
+  <source src="https://raw.githubusercontent.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/main/Final/Videos/IMG_1444.MOV" type="video/quicktime">
+  Your browser does not support the video tag.
+</video>
+
 
 
 ### Identified Issues
