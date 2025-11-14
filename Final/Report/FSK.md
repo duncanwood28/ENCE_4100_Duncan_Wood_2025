@@ -305,10 +305,8 @@ Key Details
 ## Demos, Issues, and Future Work
 
 
-<video width="600" controls>
-  <source src="https://raw.githubusercontent.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/main/Final/Videos/IMG_1444.MOV" type="video/quicktime">
-  Your browser does not support the video tag.
-</video>
+![Demo](./Videos/scope_fsk.gif)
+
 
 
 
