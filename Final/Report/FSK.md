@@ -250,6 +250,18 @@ Key details
 - At end of symbol window:
   - Compute EDGES_LOW = SYMBOL_PERIOD / N0
   - Compute EDGES_HIGH = SYMBOL_PERIOD / N1
+  - Compute THRESHOLD = (EDGES_LOW + EDGES_HIGH) / 2
+  - If edge_count > THRESHOLD then symbol = 1 else 0
+  - Shift that symbol into bit_buffer (LSB-first)
+  - When 8 bits collected (bit_index wraps from 0..7), emit rx_byte and assert rx_ready for one cycle.
+- Edge counter reset after each symbol window.
+<br>
+<br>
+
+Notes on Robustness
+
+- The demodulator is a simple edge-counting discriminator (non-coherent, energy-based). It assumes that high tone produces many more toggles during a symbol than the low tone. The threshold halfway between the expected edges for the two tones discriminates which tone was present.
+- The chosen N0/N1 must produce a meaningful difference in edges per symbol (EDGES_HIGH - EDGES_LOW significantly bigger than jitter/noise).
 
 ## UART Transmitter
 
