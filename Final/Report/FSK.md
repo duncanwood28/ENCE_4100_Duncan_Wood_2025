@@ -305,8 +305,15 @@ Key Details
 ## Demos, Issues, and Future Work
 
 
-![Demo](./Videos/scope_fsk.gif)
+![FSK Scope](https://raw.githubusercontent.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/main/Final/Videos/scope_fsk.gif)
+![Serial Terminal Output](https://raw.githubusercontent.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/main/Final/Videos/serial_output_fsk.gif)
 
+<br>
+<br>
+Higher quality videos available in "Videos" folder.
+<br>
+<br>
+Overall, it can be seen that the incorrect characters are being printed in the serial terminal after it goes through the demodulator.
 
 
 
