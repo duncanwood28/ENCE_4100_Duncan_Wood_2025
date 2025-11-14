@@ -7,6 +7,11 @@ The goal of this project was to design and implement a complete Frequency-Shift 
 
 ## Top-Level Code / System Overview
 
+<div align="center">
+  <img src="img/fsk_system_block.jpg" alt="Top-Level" width="600"/><br>
+  <em>Figure 1: Top-level block diagram </em>
+</div>
+
 At the top level, the UART receiver captures asynchronous serial data from the PC and delivers each byte to the transmit FSM, which generates a timed bitstream at the chosen symbol period. This bitstream drives the FSK modulator, which outputs one of two discrete frequencies depending on the current bit value. The resulting waveform is looped internally into the FSK demodulator, which counts transitions within each symbol window to determine whether the transmitted bit was a logical 0 or 1, reassembles bytes, and forwards them to the UART transmitter for verification on the PC. Throughout this flow, additional display and debug outputs provide real-time insight into internal modem activity.
 
 ### Module Header
