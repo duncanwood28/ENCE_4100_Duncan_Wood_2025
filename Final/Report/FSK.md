@@ -7,10 +7,8 @@ The goal of this project was to design and implement a complete Frequency-Shift 
 
 ## Top-Level Code / System Overview
 
-<div align="center">
-  <img src="img/fsk_system_block.jpg" alt="Top-Level" width="600"/><br>
-  <em>Figure 1: Top-level block diagram </em>
-</div>
+![Top‑Level](https://raw.githubusercontent.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/main/Final/img/fsk_system_block.jpg)
+
 
 At the top level, the UART receiver captures asynchronous serial data from the PC and delivers each byte to the transmit FSM, which generates a timed bitstream at the chosen symbol period. This bitstream drives the FSK modulator, which outputs one of two discrete frequencies depending on the current bit value. The resulting waveform is looped internally into the FSK demodulator, which counts transitions within each symbol window to determine whether the transmitted bit was a logical 0 or 1, reassembles bytes, and forwards them to the UART transmitter for verification on the PC. Throughout this flow, additional display and debug outputs provide real-time insight into internal modem activity.
 
@@ -159,6 +157,12 @@ assign LEDR[2] = RxD_data_ready;
   - Bit stream level, transmitting flag, and UART-RX ready flag.
 
 All other LEDs remain unused and default to off.
+<br>
+<br>
+The RTL for the top-level module is:
+
+![Top‑Level](https://raw.githubusercontent.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/main/Final/img/fsk_system_rtl.jpg)
+
 
 ## UART Receiver
 The UART receiver receives serial bits from GPIO[35] and produces bytes (RxD_data) with a RxD_data_ready pulse when a full byte is received. This is the input to the FSK transmit FSM.
@@ -172,6 +176,11 @@ The UART receiver receives serial bits from GPIO[35] and produces bytes (RxD_dat
 - Idle / packet detection: RxD_idle and RxD_endofpacket computed by counting gaps between characters.
 
 Overall, the uart receiver ensures reliable conversion of asynchronous serial data into aligned bytes that the FSK transmit FSM can use.
+<br>
+<br>
+The RTL for the asynchronous receiver is:
+![Receiver](https://raw.githubusercontent.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/main/Final/img/receiver_rtl.jpg)
+
 
 
 ## FSK Transmitter FSM
@@ -216,6 +225,10 @@ As mentioned previously, parameters were changed to make the FSK signal slow and
 In order for everything to synchronize with the UART baud and successfully encode/decode the bits, the calculated SYMBOL_PERIOD value needs to be used. 
 
 
+The RTL for the FSK transmit FSM module is:
+<br>
+<img src="https://raw.githubusercontent.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/main/Final/img/fsk_tx_rtl.jpg" alt="Top-Level" width="400"/>
+
 
 ## FSK Modulator
 The fsk modulator converts the logical uart_bit stream (0 or 1) into an FSK waveform (fsk_out) by toggling the output at two possible rates. One rate (N0) for bit=0, another (N1) for bit=1.
@@ -254,6 +267,11 @@ So the modulator maps logical 0→~0.78 MHz tone and logical 1: ~1.56 MHz tone (
 <br>
 <br>
 NOTE: the symbol period and frequency interval values were changed to enable a slow and observable working system; what is demonstrated in the videos/gifs.
+<br>
+<br>
+The RTL for the FSK modulator module is:
+<br>
+<img src="https://raw.githubusercontent.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/main/Final/img/fsk_mod_rtl.jpg" alt="Top-Level" width="600"/>
 
 ## FSK Demodulator
 The demodulator listens to the FSK analog-like fsk_in digital waveform, counts signal edges during each symbol interval and decides whether that symbol corresponded to a logical 0 or 1, then reconstructs bytes.
@@ -285,6 +303,12 @@ Notes on Robustness
 - The demodulator is a simple edge-counting discriminator (non-coherent, energy-based). It assumes that high tone produces many more toggles during a symbol than the low tone. The threshold halfway between the expected edges for the two tones discriminates which tone was present.
 - The chosen N0/N1 must produce a meaningful difference in edges per symbol (EDGES_HIGH - EDGES_LOW significantly bigger than jitter/noise).
 
+<br>
+<br>
+The RTL for the FSK demodulator is:
+<br>
+<img src="https://raw.githubusercontent.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/main/Final/img/fsk_demod_rtl.jpg" alt="Top-Level" width="800"/>
+
 ## UART Transmitter
 The uart transmitter takes reconstructed bytes (demod_byte) from demodulator, serializes them and sends bits to the serial terminal (GPIO[33]) using UART timing (115200 baud). The uart transmitter closes the loop of the FSK system.
 <br>
@@ -296,6 +320,11 @@ Key Details
 - TxD_busy indicates when transmitter is busy.
 - The transmitter latches TxD_data on start and shifts it out on BitTick.
 - It exposes current_bit (used by FSK modulator in modifications in file) so it can drive modulator directly in some setups.
+<br>
+<br>
+The transmitter RTL is:
+<br>
+<img src="https://raw.githubusercontent.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/main/Final/img/transmitter_rtl.jpg" alt="Top-Level" width="800"/>
 
 ## 7-Segment Decoder
 The "char2seg" module maps ASCII byte (char) to 7-segment pattern (HEX0) for the on-board 7-seg display. This is purely for human convenience/debug: it displays the original received character (from UART RX) on board.
@@ -306,6 +335,12 @@ Key Details
 
 - Lowercases uppercase letters (maps 65–90 to +32).
 - A case mapping enumerates ASCII codes for digits and lowercase letters to 7-seg bit patterns.
+<br>
+<br>
+The 7-segment decoder RTL is:
+<br>
+<img src="https://raw.githubusercontent.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/main/Final/img/transmitter_rtl.jpg" alt="Top-Level" width="800"/>
+
 
 ## Demos, Issues, and Future Work
 
