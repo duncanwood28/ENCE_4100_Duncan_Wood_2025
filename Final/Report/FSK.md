@@ -1,4 +1,4 @@
-# Final Project: FSK Generator
+# Final Project: Frequency Shift-Keying (FSK)
 *Duncan Wood* <br>
 *11/14/2025*
 
