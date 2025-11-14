@@ -304,6 +304,10 @@ Key Details
 
 ## Demos, Issues, and Future Work
 
+<video src="Videos/fsk_2.mp4" width="600" controls></video>
+
+<video src="Videos/IMG_1444.MOV" width="600" controls></video>
+
 
 ### Identified Issues
 
