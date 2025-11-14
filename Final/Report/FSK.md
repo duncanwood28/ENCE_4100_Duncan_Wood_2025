@@ -3,9 +3,11 @@
 *11/14/2025*
 
 ## Objective
-
+The goal of this project was to design and implement a complete Frequency-Shift Keying (FSK) modem on an FPGA using a 50 MHz system clock. The system accepts asynchronous serial data from a PC, converts each received byte into a framed bitstream, and maps each bit to one of two discrete output frequencies using a toggle-based FSK modulator. This modulated waveform is looped back internally into an FSK demodulator, which classifies each symbol by counting waveform transitions and reconstructs the original byte stream for retransmission over UART. The project demonstrates an end-to-end digital communication link entirely in hardware—spanning byte framing, carrier modulation, symbol timing, and symbol decision logic—and provides an opportunity to explore practical synchronization challenges that arise when theoretical modulation schemes meet real hardware timing constraints.
 
 ## Top-Level Code / System Overview
+
+At the top level, the UART receiver captures asynchronous serial data from the PC and delivers each byte to the transmit FSM, which generates a timed bitstream at the chosen symbol period. This bitstream drives the FSK modulator, which outputs one of two discrete frequencies depending on the current bit value. The resulting waveform is looped internally into the FSK demodulator, which counts transitions within each symbol window to determine whether the transmitted bit was a logical 0 or 1, reassembles bytes, and forwards them to the UART transmitter for verification on the PC. Throughout this flow, additional display and debug outputs provide real-time insight into internal modem activity.
 
 ### Module Header
 ```verilog
@@ -302,6 +304,38 @@ Key Details
 
 ## Demos, Issues, and Future Work
 
+
+### Identified Issues
+
+- Symbol boundary misalignment
+  - The demodulator starts counting edges without synchronizing to the transmitter’s actual bit boundaries.
+  - Even a small offset (a few clock cycles) causes a symbol window to overlap two transmitted bits, producing incorrect edge counts.
+- Fixed threshold
+  - The threshold, computed as the midpoint between expected low-tone and high-tone edge counts, assumes ideal conditions.
+  - Small variations in toggle timing and jitter can push counts near the threshold and cause misclassification.
+- Limited edge separation
+  - With the current tone spacing (N₀ = 32, N₁ = 16), the difference in edges per symbol is modest (~13 and ~27).
+  - This small spread reduces noise immunity and increases the chance of symbol errors.
+- Lack of UART frame awareness
+  - The demodulator collects 8 bits continuously without detecting UART start/stop bits.
+  - A single incorrect bit shifts byte alignment and corrupts all subsequent data.
+- No visibility into internal metrics
+  - The system currently does not expose per-symbol edge counts or thresholds, making debugging more difficult.
+
+
+### Potential Solutions
+
+- Implement Symbol Sychronization
+  - Detect the falling edge of the UART start bit and reset the demodulator’s symbol timer.
+  - Ensures each 434-clock window aligns precisely with the transmitter’s bit boundaries.
+- Increase tone separation
+  - Choose N₀ and N₁ values with a larger ratio (ex. N₀ = 48, N₁ = 12).
+  -  Produces a wider gap between low-tone and high-tone edge counts, reducing decision ambiguity.
+- Add uART-frame validation at the receiver
+  - Check for valid start and stop bits before accepting a reconstructed byte.
+  - Prevents a single bit error from permanently shifting the bitstream.
+- Smoothing/filtering edge detection
+  -  low-pass filter the toggle signal to reduce accidental double-edge detection.
 
 
 
