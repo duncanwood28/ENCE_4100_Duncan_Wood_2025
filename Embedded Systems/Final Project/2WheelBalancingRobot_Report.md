@@ -19,9 +19,20 @@
 ---
 # Part 1: System Design
 
+
 # Part 2: PCB Design
 
+## 2.1 Schematic
+
+## 2.2 Layout
+
+## 2.3 3D View
+
 # Part 3: Assembly
+
+## 3.1 Assembled PCB
+
+## 3.2 Assembled Robot
 
 # Part 4: 3 Wheel Robot
 
