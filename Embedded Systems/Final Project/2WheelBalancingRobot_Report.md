@@ -35,7 +35,7 @@
 ## 3.2 Assembled Robot
 
 # Part 4: 3 Wheel Robot
-
+![Alt text](ENCE_4100_Duncan_Wood_2025/Embedded Systems/Final Project/images/3Wheel_Top.jpg)
 # Part 5: 2 Wheel Balancing Robot
 
 # Part 6: 2 Wheel Balancing Robot with Pendulum
