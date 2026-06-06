@@ -35,7 +35,33 @@
 ## 3.2 Assembled Robot
 
 # Part 4: 3 Wheel Robot
-![Alt text](ENCE_4100_Duncan_Wood_2025/Embedded Systems/Final Project/images/3Wheel_Top.jpg)
+For the first phase of troubleshooting the prototype, the test code was used to drive the robot with 3 wheels without having to balance it.
+
+The remote control web application was used to control the robot and move it forward, left, right, and stop it when needed. Demos are shown below.
+
+**ISSUE:** Motor B is only able to move forward at max speed, likely due to a wiring issue with the TB6612 driver. The physical motors were traded between the two plugs, and the one attached to "Motor B" still had the same issue, showing the motors themselves are fine. Motor A works great, so nothing is wrong with the MPU or its connection. Because Motor B only runs at full speed, Motor A's speed was changed to full speed to allow the robot to drive safe.
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/3Wheel_Top.jpg" alt="3 Wheel Robot Top View" width="600">
+
+**Figure: 3 Wheel Robot Top View**
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/gif/3Wheel_Forward.gif" alt="3 Wheel Robot Moving Forward" width="600">
+
+ **Demo 1: 3 Wheel Robot Moving Forward**
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/gif/3Wheel_Right.gif" alt="3 Wheel Robot Moving Right" width="400">
+
+ **Demo 2: 3 Wheel Robot Moving Right**
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/gif/3Wheel_Left.gif" alt="3 Wheel Robot Moving Left" width="400">
+
+ **Demo 3: 3 Wheel Robot Moving Left**
+ 
+
+
+
+
+
 # Part 5: 2 Wheel Balancing Robot
 
 # Part 6: 2 Wheel Balancing Robot with Pendulum
