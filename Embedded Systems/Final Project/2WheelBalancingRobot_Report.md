@@ -58,10 +58,19 @@ The remote control web application was used to control the robot and move it for
  **Demo 3: 3 Wheel Robot Moving Left**
  
 
-
-
-
-
 # Part 5: 2 Wheel Balancing Robot
+
+Ideally, creating the 2 Wheel Balancing Robot would involve driving the wheels using a PID control algorithm based on the IMU readings and the speed from the encoder. As mentioned before, Motor B only moves in the forward direction at high speed thus unable to be controled (speed and direction cannot change). Additionally, the encoder is attached to Motor B making it essentially useless to balance the robot. Because of these issues, the 2 wheel balancing system requires creative solutions.
+
+## Strategy A: Motor B Fixed
+
+As a starting point, a program was created to balance the robot with Motor B locked in place while Motor A is in motion.
+
+
+
+## Strategy B: Forward Motion with Motor B Ticks
+
+
+
 
 # Part 6: 2 Wheel Balancing Robot with Pendulum
