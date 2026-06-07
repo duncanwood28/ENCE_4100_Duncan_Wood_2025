@@ -65,6 +65,10 @@ Ideally, creating the 2 Wheel Balancing Robot would involve driving the wheels u
 ## Strategy A: Motor B Fixed
 
 As a starting point, a program was created to balance the robot with Motor B locked in place while Motor A is in motion.
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_OptionA.png" alt="3 Wheel Robot Top View" width="600">
+
+
+
 
 
 
