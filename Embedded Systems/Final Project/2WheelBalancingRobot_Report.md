@@ -19,6 +19,8 @@
 ---
 # Part 1: System Design
 
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2wheel_system1.png" alt="2 Wheel Schematic" width="600">
+
 
 # Part 2: PCB Design
 
