@@ -177,7 +177,19 @@ In Demo 7 the robot is seen attempting to balance. It starts with the back tippe
 - **PID Calibration:** The PID control parameters could be calibrated for better response time and error correction.
 - **Motor B:** Once again, the hardware problems with Motor B is not helping: it can only go in one direction at one speed. Because of this the 2 motors in the 2 wheel system cannot be controlled symmetrically, making long-term balancing impossible.
 
-For now, the problems with Motor B and the COM cannot be changed. Further PID calibration was attempted.
+For now, the problems with Motor B and the COM cannot be changed. Further PID calibration was attempted but robot purformance was not improved.
 
 # Part 6: Conclusion and Future Work
+
+## Future Work
+
+If the project were to be continued then the first step would be to troubleshoot the soldered PCB, particularly around the motor driver to diagnose what the issue is with Motor B. As mentioned earlier, since Motor A works fine there is no issue with the IMU and it is more than likely to be something on the Motor B side of the driver such as inefficient soldering on the drive pins or damage on the drive itself affecting Motor B. So an oscillascope would be used to do continuity tests on the pins connected to Motor B to check for soldering issues, otherwise solder in a new driver.
+
+Next, a new chassis and overall robot body would be designed to give symmetric weight to the robot and make it easier to balance between the two wheels. One of the keys to this would be placing the battery box in the middle of the chassis by creating a shield to go over the PCB and place the batteries which would prevent the front or back of the robot from being overwhelmed with mass.
+
+Both of these changes would eliminate the hardware issues currently hindering an effective 2 wheel balancing robot.
+
+## Conclusion
+
+
 
