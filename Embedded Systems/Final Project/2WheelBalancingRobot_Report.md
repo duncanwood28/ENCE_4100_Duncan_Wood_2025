@@ -24,9 +24,25 @@
 
 ## 2.1 Schematic
 
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_schem.png" alt="2 Wheel Schematic" width="600">
+
+**Figure: PCB Schematic**
+
 ## 2.2 Layout
 
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_layout.png" alt="2 Wheel Layout" width="600">
+
+**Figure: Layout**
+
 ## 2.3 3D View
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_3D.png" alt="2 Wheel Schematic" width="600">
+
+**Figure: PCB 3D View**
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_3D2.png" alt="2 Wheel Schematic" width="600">
+
+**Figure: PCB 3D Tilted View**
 
 # Part 3: Assembly
 
