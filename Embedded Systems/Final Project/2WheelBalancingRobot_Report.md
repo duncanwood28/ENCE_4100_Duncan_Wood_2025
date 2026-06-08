@@ -86,6 +86,12 @@ The remote control web application was used to control the robot and move it for
 
 **Figure: 3 Wheel Robot Top View**
 
+The online remote control shown below was used to control the 3 Wheel robot.
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/3_wheel_remote.png" alt="3 Wheel Robot Top View" width="400">
+
+**Figure: Online Remote Control (IP 192.168.4.1)**
+
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/gif/3Wheel_Forward.gif" alt="3 Wheel Robot Moving Forward" width="600">
 
  **Demo 1: 3 Wheel Robot Moving Forward**
