@@ -149,5 +149,7 @@ In Demo 7 the robot is seen attempting to balance. It starts with the back tippe
 - **Center of mass:** Using the 3 Wheel chassis puts the axle far off from the center of mass. The heaviest component, the battery set, is at the front of the vehicle on the edge of the axle making it hard to balance with 2 wheels.
 
 - **PID Calibration:** The PID control parameters could be calibrated for better response time and error correction.
-- **Motor B:** Once again, the hardware problems with Motor B is not helping: it can only go in one direction at one speed. Because of this the 2 motors in the 2 wheel system cannot be controlled symmetrically, making long-term balancing impossible
+- **Motor B:** Once again, the hardware problems with Motor B is not helping: it can only go in one direction at one speed. Because of this the 2 motors in the 2 wheel system cannot be controlled symmetrically, making long-term balancing impossible.
+
+For now, the problems with Motor B and the COM cannot be changed. Further PID calibration was attempted.
 
