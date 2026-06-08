@@ -77,6 +77,6 @@ Next, effective balanced forward motion was attempted by adding "ticks" of motio
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_OptionB.png" alt="2 Wheel" width="600">
 
-**Figure: Strategy B Flowchart**
+**Figure : Strategy B Flowchart**
 
 # Part 6: 2 Wheel Balancing Robot with Pendulum
