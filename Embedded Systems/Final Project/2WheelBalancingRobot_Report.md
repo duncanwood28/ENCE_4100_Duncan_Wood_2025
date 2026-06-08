@@ -138,4 +138,14 @@ Next, effective balanced forward motion was attempted by adding "ticks" of motio
 
 In Demo 6 it can be seen that Motor A (facing screen) is behaving the same way as it did in Demo 4: running forward when IMU is tilted back and running backward when IMU is tilted forward. In this program Motor B was added with a similar function to assist in balancing the robot. Because of Motor B's hardware issue, it only responds when the robot falls backward in which the motor moves forward (the only direction it can) to give the robot forward thrust. 
 
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/gif/2Wheel_Floor1.gif" alt="3 Wheel Robot Moving Forward" width="400">
+
+**Demo 7: 2 Wheel Balance Attempt**
+
+In Demo 7 the robot is seen attempting to balance. It starts with the back tipped down and thus both motors move forward with the goal of giving the robot forward thrust to balance. The motors do give the robot thrust, but it fully tips forward triggering Motor A to reverse at full speed and Motor B to brake causing the robot to oscillate in circles. There are three clear issues causing the robot's inefficiencies:
+
+- **Center of mass:** Using the 3 Wheel chassis puts the axle far off from the center of mass. The heaviest component, the battery set, is at the front of the vehicle on the edge of the axle making it hard to balance with 2 wheels.
+
+- **PID Calibration:** The PID control parameters could be calibrated for better response time and error correction.
+- **Motor B:** Once again, the hardware problems with Motor B is not helping: it can only go in one direction at one speed. Because of this the 2 motors in the 2 wheel system cannot be controlled symmetrically, making long-term balancing impossible
 
