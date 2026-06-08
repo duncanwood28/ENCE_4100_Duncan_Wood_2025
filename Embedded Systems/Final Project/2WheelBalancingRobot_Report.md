@@ -14,7 +14,7 @@
 3. [Part 3: Assembly](#part-3-assembly)
 4. [Part 4: 3 Wheel Robot](#part-4-3-wheel-robot)
 5. [Part 5: 2 Wheel Balancing Robot](#part-5-2-wheel-balancing-robot)
-6. [Part 6: 2 Wheel Balancing Robot with Pendulum](#part-6-2-wheel-balancing-robot-with-pendulum)
+6. [Part 6: Conclusion and Future Work](#part-6-conclusion-and-future-work)
 
 ---
 # Part 1: System Design
@@ -74,6 +74,26 @@
 **Figure: Fully Soldered PCB Back View**
 
 ## 3.2 Assembled Robot
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_Assembled.jpg" alt="2 Wheel Schematic" width="600">
+
+**Figure: Assembled 3 Wheel Robot**
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_Assembled_Front.jpg" alt="2 Wheel Schematic" width="400">
+
+**Figure: Assembled 3 Wheel Robot Front View**
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_Assembled_Left.jpg" alt="2 Wheel Schematic" width="400">
+
+**Figure: Assembled 3 Wheel Robot Left Side View**
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_Assembled_Right.jpg" alt="2 Wheel Schematic" width="400">
+
+**Figure: Assembled 3 Wheel Robot Right Side View**
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_Assembled_Back.jpg" alt="2 Wheel Schematic" width="400">
+
+**Figure: Assembled 3 Wheel Robot back View**
 
 # Part 4: 3 Wheel Robot
 For the first phase of troubleshooting the prototype, the test code was used to drive the robot with 3 wheels without having to balance it.
@@ -158,4 +178,6 @@ In Demo 7 the robot is seen attempting to balance. It starts with the back tippe
 - **Motor B:** Once again, the hardware problems with Motor B is not helping: it can only go in one direction at one speed. Because of this the 2 motors in the 2 wheel system cannot be controlled symmetrically, making long-term balancing impossible.
 
 For now, the problems with Motor B and the COM cannot be changed. Further PID calibration was attempted.
+
+# Part 6: Conclusion and Future Work
 
