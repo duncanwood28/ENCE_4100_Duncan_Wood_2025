@@ -86,6 +86,17 @@ As a starting point, a program was created to balance the robot with Motor B loc
 
 **Figure: Strategy A Flowchart**
 
+The demo below shows the robot being tilted in the air by hand. It can be seen that the motor correctly responds based on the angle measured by the IMU: Speeds forward when it is tilted far backward, speeds backward when tilted far forward, and runs at lower speeds when tilted at lower angles in the proper direction.
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/gif/2wheelbalance.gif" alt="3 Wheel Robot Moving Forward" width="500">
+
+**Demo 4: Handheld Balancing**
+
+Then it was attempted on the table, demo shown below. It can be seen that although Motor A is attempting to balance it out, it obviously can't due to several reasons. It didn't help that the axel is off from the center of mass, but the main reason is that it is simply unable to be effective with only one active motor.
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/gif/2Wheel_OptionA.gif" alt="3 Wheel Robot Moving Forward" width="400">
+
+**Demo 5: Attempted Floor Balance**
 
 ## Strategy B: Forward Motion with Motor B Ticks
 
