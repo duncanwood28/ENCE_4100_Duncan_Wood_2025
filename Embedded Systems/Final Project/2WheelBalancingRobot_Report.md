@@ -44,9 +44,32 @@
 
 **Figure: PCB 3D Tilted View**
 
+## 2.4 Printed Board
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/PCB_Unsoldered_Top.jpg" alt="2 Wheel Schematic" width="500">
+
+**Figure: Printed PCB Top View**
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/PCB_Unsoldered_Back.jpg" alt="2 Wheel Schematic" width="500">
+
+**Figure: Printed PCB Back View**
+
+
 # Part 3: Assembly
 
 ## 3.1 Assembled PCB
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/PCB_Assembled_Top.jpg" alt="2 Wheel Schematic" width="500">
+
+**Figure: Fully Soldered PCB**
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/PCB_Assembled_Modules.jpg" alt="2 Wheel Schematic" width="500">
+
+**Figure: Fully Soldered PCB with Modules**
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/PCB_Assembled_Back.jpg" alt="2 Wheel Schematic" width="500">
+
+**Figure: Fully Soldered PCB Back View**
 
 ## 3.2 Assembled Robot
 
@@ -75,6 +98,9 @@ The remote control web application was used to control the robot and move it for
  
 
 # Part 5: 2 Wheel Balancing Robot
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_Side.png" alt="2 Wheel Schematic" width="400">
+
+**Figure: Assembled 2 Wheel Robot**
 
 Ideally, creating the 2 Wheel Balancing Robot would involve driving the wheels using a PID control algorithm based on the IMU readings and the speed from the encoder. As mentioned before, Motor B only moves in the forward direction at high speed thus unable to be controled (speed and direction cannot change). Additionally, the encoder is attached to Motor B making it essentially useless to balance the robot. Because of these issues, the 2 wheel balancing system requires creative solutions.
 
@@ -106,4 +132,10 @@ Next, effective balanced forward motion was attempted by adding "ticks" of motio
 
 **Figure : Strategy B Flowchart**
 
-# Part 6: 2 Wheel Balancing Robot with Pendulum
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/gif/2Wheel_BalanceHand.gif" alt="3 Wheel Robot Moving Forward" width="400">
+
+**Demo 6: 2 Wheel Handheld Balance**
+
+In Demo 6 it can be seen that Motor A (facing screen) is behaving the same way as it did in Demo 4: running forward when IMU is tilted back and running backward when IMU is tilted forward. In this program Motor B was added with a similar function to assist in balancing the robot. Because of Motor B's hardware issue, it only responds when the robot falls backward in which the motor moves forward (the only direction it can) to give the robot forward thrust. 
+
+
