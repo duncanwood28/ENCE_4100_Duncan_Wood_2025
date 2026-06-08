@@ -64,17 +64,19 @@ Ideally, creating the 2 Wheel Balancing Robot would involve driving the wheels u
 
 ## Strategy A: Motor B Fixed
 
-As a starting point, a program was created to balance the robot with Motor B locked in place while Motor A is in motion.
-<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_OptionA.png" alt="3 Wheel Robot Top View" width="600">
+As a starting point, a program was created to balance the robot with Motor B locked in place while Motor A is in motion. Program flowchart shown below.
 
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_OptionA.png" alt="2 Wheel" width="600">
 
-
-
+**Figure: Strategy A Flowchart**
 
 
 ## Strategy B: Forward Motion with Motor B Ticks
 
+Next, effective balanced forward motion was attempted by adding "ticks" of motion from Motor B to asist Motor A in moving the robot forward. Program flowchart shown below.
 
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_OptionB.png" alt="2 Wheel" width="600">
 
+**Figure: Strategy B Flowchart**
 
 # Part 6: 2 Wheel Balancing Robot with Pendulum
