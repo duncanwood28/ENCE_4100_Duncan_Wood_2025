@@ -163,7 +163,7 @@ The online remote control shown below was used to control the 3 Wheel robot.
 
 Ideally, creating the 2 Wheel Balancing Robot would involve driving the wheels using a PID control algorithm based on the IMU readings and the speed from the encoder. As mentioned before, Motor B only moves in the forward direction at high speed thus unable to be controled (speed and direction cannot change). Additionally, the encoder is attached to Motor B making it essentially useless to balance the robot. Because of these issues, the 2 wheel balancing system requires creative solutions.
 
-## Strategy A: Motor B Fixed
+## 5.1 Strategy A: Motor B Fixed
 
 As a starting point, a program was created to balance the robot with Motor B locked in place while Motor A is in motion. Program flowchart shown below.
 
@@ -183,7 +183,7 @@ Then it was attempted on the table, demo shown below. It can be seen that althou
 
 **Demo 5: Attempted Floor Balance**
 
-## Strategy B: Forward Motion with Motor B Ticks
+## 5.2 Strategy B: Forward Motion with Motor B Ticks
 
 Next, effective balanced forward motion was attempted by adding "ticks" of motion from Motor B to asist Motor A in moving the robot forward. Program flowchart shown below.
 
@@ -210,18 +210,18 @@ In Demo 7 the robot is seen attempting to balance. It starts with the back tippe
 
 For now, the problems with Motor B and the COM cannot be changed. Further PID calibration was attempted but robot purformance was not improved.
 
-## 5.2 Program Code Review
+## 5.3 Program Code Review
 
 **NOTE:** The program given in class was used as a template for the code.
 
-### 5.2.1 Software Scheduler
+### 5.3.1 Software Scheduler
 
 Rather than using a real-time operating system, the main code implements a time-based scheduler using HAL_GetTick(), which returns the system uptime in milliseconds driven by the SysTick interrupt. Each task stores its own last_X_tick timestamp and executes only when the elapsed time since the last run meets or exceeds its target interval. The three scheduled tasks are the LED heartbeat (100 ms), the IMU update (10 ms), and the telemetry transmission (100 ms), with the PID control loop also running at 10 ms. Since all intervals are checked independently at each iteration, a task running slightly late does not delay other tasks.
 
-### 5.2.2 Motor Setup
+### 5.3.2 Motor Setup
 Both motors are driven by a TB6612 driver, controlled through TIM2 in PWM mode. TIM2 is configured with a prescaler of 83 (84−1) and a period of 99 (100−1), giving a PWM frequency of 10 kHz on an 84 MHz clock. Motor A uses TIM2 Channel 2 and Motor B uses TIM2 Channel 1. Each motor struct stores its direction control pins (IN1, IN2), PWM timer handle, and an offset value of −1 and +1 respectively, which accounts for the physical mirroring of the two motors on opposite sides of the chassis so that a positive drive command produces forward motion on both. Both motors are braked immediately after initialisation, ensuring the robot is stationary before the balance loop begins.
 
-### 5.2.3 Telemetry
+### 5.3.3 Telemetry
 
 Every 100 ms, four state variables are packed into a formatted ASCII string and transmitted over UART1 at 115200 baud using interrupt-driven transmission (HAL_UART_Transmit_IT), which returns immediately without blocking the scheduler. The figure below shows the packet format, where speed is the wheel velocity in degrees per second from the MT6701 encoder, roll is the lateral tilt angle from the complementary filter, pitch is the tilt angle used by the PID, and counter is a rolling integer from 0–19 used to verify packet continuity at the receiving end.
 
@@ -233,7 +233,7 @@ Every 100 ms, four state variables are packed into a formatted ASCII string and 
 
 **Figure 22: Telemetry Code Part 2**
 
-### 5.2.4 UART Commands
+### 5.3.4 UART Commands
 Single-byte ASCII commands are received over UART1 using interrupt-driven reception (HAL_UART_Receive_IT), which fires HAL_UART_RxCpltCallback on each received byte. The callback stores the byte in gUART_Cmd and immediately re-arms the receiver for the next byte. In the main code, gUART_Cmd is checked each iteration and processed through a switch statement supporting five commands: w (forward), s (backward), a (turn left), d (turn right), and x (stop/brake). Each command also updates the RGB LED color to provide a visual indication of the current drive state. gUART_Cmd is cleared to zero after processing to prevent the same command from repeating on subsequent loop iterations. A separate HAL_UART_ErrorCallback re-arms reception in the event of a UART overrun error, ensuring the command channel never silently stops responding.
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2wheel_cmd1.png" alt="3 Wheel Robot Moving Forward" width="300">
@@ -244,11 +244,11 @@ Single-byte ASCII commands are received over UART1 using interrupt-driven recept
 
 **Figure 24: UART Commands Code Part 2**
 
-### 5.2.5 Magnetic Encoder
+### 5.3.5 Magnetic Encoder
 
 The magnetic encoder is connected over I2C3 and provides wheel position and velocity data. It is initialised with MT6701_Init and its zero reference is set at startup with MT6701_SetZero. The encoder is updated at 10 Hz inside HAL_TIM_PeriodElapsedCallback, triggered by TIM3 which is configured with a prescaler of 8399 (8400−1) and a period of 999 (1000−1), yielding a 10 Hz interrupt on the 84 MHz clock. The MT6701_Update function computes the angular velocity velocity_deg_s which is included in the telemetry stream and is available for future closed-loop speed control.
 
-### 5.2.6 PID Controller
+### 5.3.6 PID Controller
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2wheel_PID1.png" alt="3 Wheel Robot Moving Forward" width="400">
 
