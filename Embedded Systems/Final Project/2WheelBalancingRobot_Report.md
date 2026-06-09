@@ -212,9 +212,11 @@ For now, the problems with Motor B and the COM cannot be changed. Further PID ca
 
 ## 5.2 Program Code Review
 
+**NOTE:** The program given in class was used as a template for the code.
+
 ### 5.2.1 Software Scheduler
 
-Rather than using a real-time operating system, the main code implements a time-based scheduler using HAL_GetTick(), which returns the system uptime in milliseconds driven by the SysTick interrupt. Each task stores its own last_X_tick timestamp and executes only when the elapsed time since the last run meets or exceeds its target interval. The three scheduled tasks are the LED heartbeat (100 ms), the IMU update (10 ms), and the telemetry transmission (100 ms), with the PID balance loop also running at 10 ms. Since all intervals are checked independently at each iteration, a task running slightly late does not delay other tasks.
+Rather than using a real-time operating system, the main code implements a time-based scheduler using HAL_GetTick(), which returns the system uptime in milliseconds driven by the SysTick interrupt. Each task stores its own last_X_tick timestamp and executes only when the elapsed time since the last run meets or exceeds its target interval. The three scheduled tasks are the LED heartbeat (100 ms), the IMU update (10 ms), and the telemetry transmission (100 ms), with the PID control loop also running at 10 ms. Since all intervals are checked independently at each iteration, a task running slightly late does not delay other tasks.
 
 ### 5.2.2 Motor Setup
 Both motors are driven by a TB6612 driver, controlled through TIM2 in PWM mode. TIM2 is configured with a prescaler of 83 (84−1) and a period of 99 (100−1), giving a PWM frequency of 10 kHz on an 84 MHz clock. Motor A uses TIM2 Channel 2 and Motor B uses TIM2 Channel 1. Each motor struct stores its direction control pins (IN1, IN2), PWM timer handle, and an offset value of −1 and +1 respectively, which accounts for the physical mirroring of the two motors on opposite sides of the chassis so that a positive drive command produces forward motion on both. Both motors are braked immediately after initialisation, ensuring the robot is stationary before the balance loop begins.
