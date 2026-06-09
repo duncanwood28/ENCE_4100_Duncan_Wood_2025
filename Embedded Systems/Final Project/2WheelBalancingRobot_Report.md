@@ -40,7 +40,7 @@ The robot was designed around an STM32 microcontroller acting as the central con
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_schem.png" alt="2 Wheel Schematic" width="600">
 
-**Figure: PCB Schematic**
+**Figure 2: PCB Schematic**
 
 The STM32 communicates with the IMU through the I2C connection. PWM outputs from the processor drive the motor driver to control motor speed and direction. Encoder outputs are connected to GPIO pins to allow accurate speed measurement. 
 
@@ -50,7 +50,7 @@ Decoupling capacitors and resistors were added around the voltage connections an
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_layout.png" alt="2 Wheel Layout" width="600">
 
-**Figure: Layout**
+**Figure 3: Layout**
 
 Component placement was performed to minimize wiring complexity and reduce trace lengths between the components and bottom layer connections were minimized to avoid EMI. High-current motor traces were kept wider than signal traces to support motor loads. Connectors were positioned near the board edge to simplify assembly and maintenance. Switches and buttons were placed in open locations to allow user to reach them.
 
@@ -58,13 +58,13 @@ Component placement was performed to minimize wiring complexity and reduce trace
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_3D.png" alt="2 Wheel Schematic" width="600">
 
-**Figure: PCB 3D View**
+**Figure 4: PCB 3D View**
 
 The 3D PCB view was used to verify component footprints and ensure compatibility with the robot chassis. Additional attention was given to module heights and connector accessibility to avoid interference with the battery pack and wheel assembly.
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_3D2.png" alt="2 Wheel Schematic" width="600">
 
-**Figure: PCB 3D Tilted View**
+**Figure 5: PCB 3D Tilted View**
 
 
 ## 2.4 Printed Board
@@ -73,11 +73,11 @@ The PCB was successfully ordered, fabricated, and received from PCBWay.
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/PCB_Unsoldered_Top.jpg" alt="2 Wheel Schematic" width="500">
 
-**Figure: Printed PCB Top View**
+**Figure 6: Printed PCB Top View**
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/PCB_Unsoldered_Back.jpg" alt="2 Wheel Schematic" width="500">
 
-**Figure: Printed PCB Back View**
+**Figure 7: Printed PCB Back View**
 
 
 # Part 3: Assembly
@@ -88,11 +88,11 @@ Assembly of the PCB was completed by soldering the passive components first, fol
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/PCB_Assembled_Top.jpg" alt="2 Wheel Schematic" width="500">
 
-**Figure: Fully Soldered PCB**
+**Figure 8: Fully Soldered PCB**
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/PCB_Assembled_Modules.jpg" alt="2 Wheel Schematic" width="500">
 
-**Figure: Fully Soldered PCB with Modules**\
+**Figure 9: Fully Soldered PCB with Modules**\
 
 Following assembly, basic electrical tests were conducted before applying full power. Power rails were verified using a multimeter, and communication with the IMU was confirmed through debug messages and an oscilloscope.
 
@@ -100,7 +100,7 @@ The IMU and Wifi modules were then added and sucessfully tested for any ineffici
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/PCB_Assembled_Back.jpg" alt="2 Wheel Schematic" width="500">
 
-**Figure: Fully Soldered PCB Back View**
+**Figure 10: Fully Soldered PCB Back View**
 
 ## 3.2 Assembled Robot
 
@@ -108,23 +108,23 @@ The chassis was designed to be the platform of the 3 wheel robot with screw hole
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_Assembled.jpg" alt="2 Wheel Schematic" width="600">
 
-**Figure: Assembled 3 Wheel Robot**
+**Figure 11: Assembled 3 Wheel Robot**
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_Assembled_Front.jpg" alt="2 Wheel Schematic" width="400">
 
-**Figure: Assembled 3 Wheel Robot Front View**
+**Figure 12: Assembled 3 Wheel Robot Front View**
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_Assembled_Left.jpg" alt="2 Wheel Schematic" width="400">
 
-**Figure: Assembled 3 Wheel Robot Left Side View**
+**Figure 13: Assembled 3 Wheel Robot Left Side View**
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_Assembled_Right.jpg" alt="2 Wheel Schematic" width="400">
 
-**Figure: Assembled 3 Wheel Robot Right Side View**
+**Figure 14: Assembled 3 Wheel Robot Right Side View**
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_Assembled_Back.jpg" alt="2 Wheel Schematic" width="400">
 
-**Figure: Assembled 3 Wheel Robot back View**
+**Figure 15: Assembled 3 Wheel Robot back View**
 
 # Part 4: 3 Wheel Robot
 For the first phase of troubleshooting the prototype, the test code was used to drive the robot with 3 wheels without having to balance it.
@@ -135,13 +135,13 @@ The remote control web application was used to control the robot and move it for
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/3Wheel_Top.jpg" alt="3 Wheel Robot Top View" width="600">
 
-**Figure: 3 Wheel Robot Top View**
+**Figure 16: 3 Wheel Robot Top View**
 
 The online remote control shown below was used to control the 3 Wheel robot.
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/3_wheel_remote.png" alt="3 Wheel Robot Top View" width="400">
 
-**Figure: Online Remote Control (IP 192.168.4.1)**
+**Figure 17: Online Remote Control (IP 192.168.4.1)**
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/gif/3Wheel_Forward.gif" alt="3 Wheel Robot Moving Forward" width="600">
 
@@ -159,7 +159,7 @@ The online remote control shown below was used to control the 3 Wheel robot.
 # Part 5: 2 Wheel Balancing Robot
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_Side.png" alt="2 Wheel Schematic" width="400">
 
-**Figure: Assembled 2 Wheel Robot**
+**Figure 18: Assembled 2 Wheel Robot**
 
 Ideally, creating the 2 Wheel Balancing Robot would involve driving the wheels using a PID control algorithm based on the IMU readings and the speed from the encoder. As mentioned before, Motor B only moves in the forward direction at high speed thus unable to be controled (speed and direction cannot change). Additionally, the encoder is attached to Motor B making it essentially useless to balance the robot. Because of these issues, the 2 wheel balancing system requires creative solutions.
 
@@ -169,7 +169,7 @@ As a starting point, a program was created to balance the robot with Motor B loc
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_OptionA.png" alt="2 Wheel" width="600">
 
-**Figure: Strategy A Flowchart**
+**Figure 19: Strategy A Flowchart**
 
 The demo below shows the robot being tilted in the air by hand. It can be seen that the motor correctly responds based on the angle measured by the IMU: Speeds forward when it is tilted far backward, speeds backward when tilted far forward, and runs at lower speeds when tilted at lower angles in the proper direction.
 
@@ -189,7 +189,7 @@ Next, effective balanced forward motion was attempted by adding "ticks" of motio
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_OptionB.png" alt="2 Wheel" width="600">
 
-**Figure : Strategy B Flowchart**
+**Figure 20: Strategy B Flowchart**
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/gif/2Wheel_BalanceHand.gif" alt="3 Wheel Robot Moving Forward" width="400">
 
@@ -223,14 +223,38 @@ Both motors are driven by a TB6612 driver, controlled through TIM2 in PWM mode. 
 
 Every 100 ms, four state variables are packed into a formatted ASCII string and transmitted over UART1 at 115200 baud using interrupt-driven transmission (HAL_UART_Transmit_IT), which returns immediately without blocking the scheduler. The figure below shows the packet format, where speed is the wheel velocity in degrees per second from the MT6701 encoder, roll is the lateral tilt angle from the complementary filter, pitch is the tilt angle used by the PID, and counter is a rolling integer from 0–19 used to verify packet continuity at the receiving end.
 
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2wheel_telemetry1.png" alt="3 Wheel Robot Moving Forward" width="400">
+
+**Figure 21: Telemetry Code Part 1**
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2wheel_telemetry2.png" alt="3 Wheel Robot Moving Forward" width="400">
+
+**Figure 22: Telemetry Code Part 2**
+
 ### 5.2.4 UART Commands
 Single-byte ASCII commands are received over UART1 using interrupt-driven reception (HAL_UART_Receive_IT), which fires HAL_UART_RxCpltCallback on each received byte. The callback stores the byte in gUART_Cmd and immediately re-arms the receiver for the next byte. In the main code, gUART_Cmd is checked each iteration and processed through a switch statement supporting five commands: w (forward), s (backward), a (turn left), d (turn right), and x (stop/brake). Each command also updates the RGB LED color to provide a visual indication of the current drive state. gUART_Cmd is cleared to zero after processing to prevent the same command from repeating on subsequent loop iterations. A separate HAL_UART_ErrorCallback re-arms reception in the event of a UART overrun error, ensuring the command channel never silently stops responding.
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2wheel_cmd1.png" alt="3 Wheel Robot Moving Forward" width="300">
+
+**Figure 23: UART Commands Code Part 1**
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2wheel_cmd2.png" alt="3 Wheel Robot Moving Forward" width="300">
+
+**Figure 24: UART Commands Code Part 2**
 
 ### 5.2.5 Magnetic Encoder
 
 The magnetic encoder is connected over I2C3 and provides wheel position and velocity data. It is initialised with MT6701_Init and its zero reference is set at startup with MT6701_SetZero. The encoder is updated at 10 Hz inside HAL_TIM_PeriodElapsedCallback, triggered by TIM3 which is configured with a prescaler of 8399 (8400−1) and a period of 999 (1000−1), yielding a 10 Hz interrupt on the 84 MHz clock. The MT6701_Update function computes the angular velocity velocity_deg_s which is included in the telemetry stream and is available for future closed-loop speed control.
 
 ### 5.2.6 PID Controller
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2wheel_PID1.png" alt="3 Wheel Robot Moving Forward" width="400">
+
+**Figure 25: PID Controller Code Part 1**
+
+<img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2wheel_PID2.png" alt="3 Wheel Robot Moving Forward" width="400">
+
+**Figure 26: PID Controller Code Part 2**
 
 The control loop executes every 10 ms, synchronised with the IMU update rate. Each iteration begins by reading the current pitch angle from the complementary filter (gCompFilter.pitch), which combines the data of the accelerometer and gyroscope to produce a stable angle estimate in degrees.
 
