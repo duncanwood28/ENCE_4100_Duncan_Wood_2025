@@ -21,6 +21,18 @@
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2wheel_system1.png" alt="2 Wheel Schematic" width="600">
 
+**Figure 1: System Block Diagram**
+
+The robot was designed around an STM32 microcontroller acting as the central controller for sensing, communication, and motor control. An MPU6050 IMU was used to measure robot orientation, while a quadrature encoder provided wheel speed feedback. Motor control was implemented through a TB6612 motor driver, allowing bidirectional control of two DC motors. Power was supplied by a battery pack mounted directly to the chassis. The goal of the system was to create a self-balancing 2 wheel robot capable of maintaining an upright position using feedback control.
+
+**Component Selection:**
+- **STM32:** Microcontroller for embedded software
+- **ESP-015:** Wifi module for remote control
+- **MPU6050:** accelerometer + gyroscope for complimentary filter used for angle measurement.
+- **TB6612:** Motor driver to control wheels.
+- **Encoder:** Velocity feedback for balancing.
+- **2 DC Motors:** Balancing torque for the wheels.
+
 
 # Part 2: PCB Design
 
@@ -30,11 +42,17 @@
 
 **Figure: PCB Schematic**
 
+The STM32 communicates with the IMU through the I2C connection. PWM outputs from the processor drive the motor driver to control motor speed and direction. Encoder outputs are connected to GPIO pins to allow accurate speed measurement. 
+
+Decoupling capacitors and resistors were added around the voltage connections and power sources to mitigate damage from reverse connections and high voltage.
+
 ## 2.2 Layout
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_layout.png" alt="2 Wheel Layout" width="600">
 
 **Figure: Layout**
+
+Component placement was performed to minimize wiring complexity and reduce trace lengths between the components and bottom layer connections were minimized to avoid EMI. High-current motor traces were kept wider than signal traces to support motor loads. Connectors were positioned near the board edge to simplify assembly and maintenance. Switches and buttons were placed in open locations to allow user to reach them.
 
 ## 2.3 3D View
 
@@ -42,11 +60,16 @@
 
 **Figure: PCB 3D View**
 
+The 3D PCB view was used to verify component footprints and ensure compatibility with the robot chassis. Additional attention was given to module heights and connector accessibility to avoid interference with the battery pack and wheel assembly.
+
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_3D2.png" alt="2 Wheel Schematic" width="600">
 
 **Figure: PCB 3D Tilted View**
 
+
 ## 2.4 Printed Board
+
+The PCB was successfully ordered, fabricated, and received from PCBWay.
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/PCB_Unsoldered_Top.jpg" alt="2 Wheel Schematic" width="500">
 
@@ -61,19 +84,27 @@
 
 ## 3.1 Assembled PCB
 
+Assembly of the PCB was completed by soldering the passive components first, followed by connectors and larger modules. The drives were tested to check for damage or soldering defects.
+
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/PCB_Assembled_Top.jpg" alt="2 Wheel Schematic" width="500">
 
 **Figure: Fully Soldered PCB**
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/PCB_Assembled_Modules.jpg" alt="2 Wheel Schematic" width="500">
 
-**Figure: Fully Soldered PCB with Modules**
+**Figure: Fully Soldered PCB with Modules**\
+
+Following assembly, basic electrical tests were conducted before applying full power. Power rails were verified using a multimeter, and communication with the IMU was confirmed through debug messages and an oscilloscope.
+
+The IMU and Wifi modules were then added and sucessfully tested for any inefficiency.
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/PCB_Assembled_Back.jpg" alt="2 Wheel Schematic" width="500">
 
 **Figure: Fully Soldered PCB Back View**
 
 ## 3.2 Assembled Robot
+
+The chassis was designed to be the platform of the 3 wheel robot with screw holes to fit the PCB, battery box, and wheel connections without any overlap. The battery pack was mounted at the front of the vehicle due to available mounting locations, although this placement shifted the center of mass forward. This decision later influenced balancing performance for the 2 wheel design.
 
 <img src="https://github.com/duncanwood28/ENCE_4100_Duncan_Wood_2025/blob/main/Embedded%20Systems/Final%20Project/images/2Wheel_Assembled.jpg" alt="2 Wheel Schematic" width="600">
 
@@ -179,6 +210,8 @@ In Demo 7 the robot is seen attempting to balance. It starts with the back tippe
 
 For now, the problems with Motor B and the COM cannot be changed. Further PID calibration was attempted but robot purformance was not improved.
 
+## 5.2 Program Code Review
+
 # Part 6: Conclusion and Future Work
 
 ## Future Work
@@ -190,6 +223,14 @@ Next, a new chassis and overall robot body would be designed to give symmetric w
 Both of these changes would eliminate the hardware issues currently hindering an effective 2 wheel balancing robot.
 
 ## Conclusion
+
+This project demonstrated the complete development process of an embedded robotic system, including system design, PCB development, hardware assembly, software implementation, and system testing. A custom PCB was successfully designed, manufactured, assembled, and integrated into a mobile robotic platform using an STM32F407 microcontroller, MPU6050 IMU, TB6612 motor driver, ESP 15 Wifi module, and wheel encoder.
+
+Testing confirmed that the sensing, wireless communication, and motor control subsystems operated as intended. The robot was successfully driven using a web-based remote control interface, and balancing control algorithms were implemented and evaluated using real-time IMU feedback. Multiple balancing strategies were developed and tested to compensate for hardware limitations encountered during development.
+
+Although stable long-term balancing was not achieved, the testing process identified the primary factors limiting performance. A fault affecting Motor B prevented symmetric motor control, while the chassis geometry placed the center of mass away from the wheel axle, making balancing significantly more difficult. Despite these limitations, the control software demonstrated the expected response to changes in robot orientation and validated the overall control approach.
+
+Overall, the project achieved its primary objective of designing and implementing a functional embedded robotic platform while providing valuable experience in PCB design, sensor integration, motor control, wireless communication, troubleshooting, and closed-loop control systems. The lessons learned throughout development establish a strong foundation for future improvements that could ultimately result in a fully self-balancing robot.
 
 
 
