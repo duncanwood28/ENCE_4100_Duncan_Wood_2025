@@ -13,7 +13,7 @@
 2. [Part 2: PCB Design](#part-2-pcb-design)
 3. [Part 3: Assembly](#part-3-assembly)
 4. [Part 4: 3 Wheel Robot](#part-4-3-wheel-robot)
-5. [Part 5: 2 Wheel Balancing Robot](#part-5-2-wheel-balancing-robot)
+5. [Part 5: 2 Wheel Balancing Robot (program code review included)](#part-5-2-wheel-balancing-robot)
 6. [Part 6: Conclusion and Future Work](#part-6-conclusion-and-future-work)
 
 ---
